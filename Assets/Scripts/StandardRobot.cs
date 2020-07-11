@@ -146,7 +146,6 @@ namespace Assets.Scripts
                     yield return new WaitForSeconds(TerminalWaitTime);
                     _aiPath.enabled = true;
                 }
-
                 yield return 0;
             }
         }
