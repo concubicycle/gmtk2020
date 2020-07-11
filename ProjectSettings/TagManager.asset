@@ -45,3 +45,9 @@ TagManager:
   - name: Terminal
     uniqueID: 1871530795
     locked: 0
+  - name: Player
+    uniqueID: 693633267
+    locked: 0
+  - name: Foreground
+    uniqueID: 196861149
+    locked: 0
