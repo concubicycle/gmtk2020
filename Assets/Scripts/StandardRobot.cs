@@ -140,12 +140,6 @@ namespace Assets.Scripts
 
                 _sanity.SanityPoints += Time.deltaTime * SanityRegain;
 
-                if (_aiPath.reachedDestination)
-                {
-                    _aiPath.enabled = false;
-                    yield return new WaitForSeconds(TerminalWaitTime);
-                    _aiPath.enabled = true;
-                }
                 yield return 0;
             }
         }
