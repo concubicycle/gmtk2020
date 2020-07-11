@@ -8,6 +8,7 @@ namespace Assets.Scripts
     {
         private Terminal _terminal;
 
+        public float InitialWait = 3.0f;
 
         private void Start()
         {
@@ -20,6 +21,8 @@ namespace Assets.Scripts
         private IEnumerator FlickerOn()
         {
             float initialInterval = 1.0f;
+
+            yield return new WaitForSeconds(InitialWait);
 
             while (initialInterval > 0)
             {
