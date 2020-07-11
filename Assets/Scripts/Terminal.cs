@@ -14,6 +14,10 @@ namespace Assets.Scripts
 
         private Color _initialLightColor;
 
+        public GameObject LevelEndUi = null;
+        public bool IsVictoryTerminal = false;
+
+
         private void Start()
         {
             _initialLightColor = Light.color;
@@ -41,6 +45,11 @@ namespace Assets.Scripts
             {
                 _isHacked = value;
                 Light.color = _isHacked ? Color.red : _initialLightColor;
+
+                if (_isHacked && IsVictoryTerminal)
+                {
+                    LevelEndUi.SetActive(true);
+                }
             }
         }
     }
