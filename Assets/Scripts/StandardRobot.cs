@@ -34,12 +34,6 @@ namespace Assets.Scripts
             TransitionTo(State);
         }
 
-        private void Update()
-        {
-            // set animation state based on direction of motion
-
-        }
-
         private void TransitionTo(RobotState state)
         {
             State = state;
@@ -69,10 +63,10 @@ namespace Assets.Scripts
 
             while (State == RobotState.Routine)
             {
-                if (Input.GetKey("w") ||
-                     (Input.GetKey("s")) ||
-                     (Input.GetKey("d")) ||
-                     (Input.GetKey("a")))
+                if  (Input.GetKey("w") ||
+                     Input.GetKey("s") ||
+                     Input.GetKey("d") ||
+                     Input.GetKey("a"))
                 {
                     TransitionTo(RobotState.PlayerControlled);
                 }
@@ -156,7 +150,6 @@ namespace Assets.Scripts
         {
             var vnorm = velocity.normalized;
             var up = Vector2.up;
-
             var dprod = Vector2.Dot(vnorm, up);
 
             if (dprod > 0.70710678118f)
