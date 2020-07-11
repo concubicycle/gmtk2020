@@ -1,5 +1,30 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6698296047481818384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Level 1
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Level 1
+  guid: 061bb0d94ce36343ac51b352ed4acb42
+  Banks:
+  - {fileID: -1319315130208634333}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -1563355153278517175}
+  - {fileID: 8914554469184521259}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 88000
 --- !u!114 &-5117202313122030533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36,6 +61,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-4361515752570741947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: fmod_project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637300183180000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-3577509509436235325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51,6 +94,41 @@ MonoBehaviour:
   Path: fmod_project/Build/Desktop/Master.bank
   SubDir: 
   lastModified: 637299775958022329
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-1563355153278517175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Level 1/Level
+  m_EditorClassIdentifier: 
+  Name: Level
+  Min: 1
+  Max: 11
+  Default: 1
+  Exists: 1
+--- !u!114 &-1319315130208634333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: fmod_project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637300647480000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -71,7 +149,7 @@ MonoBehaviour:
   lastModified: 637299871334437207
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-78943528229919228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,15 +182,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 5771380022296678713}
-  - {fileID: -1126280726990986977}
+  - {fileID: -1319315130208634333}
   EditorEvents:
-  - {fileID: 2634552820042951991}
+  - {fileID: -6698296047481818384}
+  - {fileID: 5075986084832510416}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -1126280726990986977}
+  - {fileID: -1319315130208634333}
   StringsBanks:
   - {fileID: 5771380022296678713}
-  stringsBankWriteTime: 637299871334437207
+  stringsBankWriteTime: 637300647480000000
   cacheVersion: 3
 --- !u!114 &169988127387698083
 MonoBehaviour:
@@ -146,8 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Music/Level_1
   guid: 061bb0d94ce36343ac51b352ed4acb42
-  Banks:
-  - {fileID: -1126280726990986977}
+  Banks: []
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -155,6 +233,29 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 72000
+--- !u!114 &5075986084832510416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Robot Dialogue
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Robot Dialogue
+  guid: a05d10a1f77cb34aafa8d8e3494c5bac
+  Banks:
+  - {fileID: -1319315130208634333}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 8000
 --- !u!114 &5771380022296678713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,9 +270,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: fmod_project/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637299871334437207
+  lastModified: 637300647480000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 738
+    Value: 898
+  Exists: 1
+--- !u!114 &8914554469184521259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Level 1/Intensity
+  m_EditorClassIdentifier: 
+  Name: Intensity
+  Min: 0
+  Max: 1
+  Default: 0
   Exists: 1
