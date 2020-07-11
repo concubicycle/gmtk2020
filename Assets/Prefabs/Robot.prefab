@@ -251,6 +251,9 @@ MonoBehaviour:
   InputTimeout: 0.5
   Sanity: 10
   connectedButton: {fileID: 0}
+  TerminalWaitTime: 0.5
+  SanityDrain: 25
+  SanityRegain: 15
   _isHacked: 0
 --- !u!114 &1633553602
 MonoBehaviour:

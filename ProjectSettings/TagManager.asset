@@ -17,7 +17,7 @@ TagManager:
   - AiCollide
   - RobotLayer
   - TerminalLayer
-  - 
+  - WallLayer
   - 
   - 
   - 
@@ -50,4 +50,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 196861149
+    locked: 0
+  - name: WallLayer
+    uniqueID: 1608084685
     locked: 0
