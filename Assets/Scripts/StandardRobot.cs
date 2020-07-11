@@ -212,7 +212,10 @@ namespace Assets.Scripts
 
         private void EnableButton()
         {
-            connectedButton.SetActive(true);
+            if (connectedButton != null)
+            {
+                connectedButton.SetActive(true);
+            }
 
         }
 
