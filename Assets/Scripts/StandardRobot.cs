@@ -30,7 +30,7 @@ namespace Assets.Scripts
         public GameObject connectedButton = null;
         HackingUI buttonScript;
         bool isControlled = false;
-        public float TerminalWaitTime = 0.5f;
+        public float TerminalWaitTime = 1.0f;
 
         public float SanityDrain = 25;
         public float SanityRegain = 15;
@@ -46,7 +46,7 @@ namespace Assets.Scripts
         [SerializeField]
         private bool _isHacked = false;
 
-
+        
         public bool IsHacked
         {
             get => _isHacked;
@@ -124,6 +124,9 @@ namespace Assets.Scripts
 
         private IEnumerator DoRoutine()
         {
+            float timeSinceDestinationCutoff = 1.0f;
+            float timeSinceDestination = timeSinceDestinationCutoff + 1.0f;
+
             while (State == RobotState.Routine)
             {
                 if (isControlled &&
@@ -137,6 +140,21 @@ namespace Assets.Scripts
 
                 var vel = new Vector2(_aiPath.velocity.x, _aiPath.velocity.y);
                 SetAnimatorState(vel);
+
+                var toDest = _aiPath.destination - _aiPath.position;
+
+                if (toDest.sqrMagnitude < 5 && timeSinceDestination > timeSinceDestinationCutoff)
+                {
+                    timeSinceDestination = 0;
+                    _aiPath.enabled = false;
+                    yield return new WaitForSeconds(TerminalWaitTime);
+                    _aiPath.enabled = true;
+                }
+                else
+                {
+                    timeSinceDestination += Time.deltaTime;
+                }
+                
 
                 _sanity.SanityPoints += Time.deltaTime * SanityRegain;
 

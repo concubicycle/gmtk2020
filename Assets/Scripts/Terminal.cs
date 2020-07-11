@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
 
 namespace Assets.Scripts
@@ -17,6 +18,13 @@ namespace Assets.Scripts
         public GameObject LevelEndUi = null;
         public bool IsVictoryTerminal = false;
 
+        private float _hackedProgress;
+
+        [SerializeField]
+        private float _hackSpeed = 60;
+
+        private Coroutine _hackSparks = null;
+
 
         private void Start()
         {
@@ -28,12 +36,23 @@ namespace Assets.Scripts
         {
             if (collision.gameObject.layer == RobotLayer)
             {
-                var rb = 
-                    collision.gameObject.GetComponent<StandardRobot>();
+                var rb = collision.gameObject.GetComponent<StandardRobot>();
 
-                if (rb.IsHacked)
+                if (rb.IsHacked && !IsHacked)
+                    _hackSparks = StartCoroutine(HackSparks());
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            if (collision.gameObject.layer == RobotLayer)
+            {
+                var rb = collision.gameObject.GetComponent<StandardRobot>();
+
+                if (rb.IsHacked && _hackSparks != null)
                 {
-                    IsHacked = true;
+                    StopCoroutine(_hackSparks);
+                    _hackedProgress = 0;
                 }
             }
         }
@@ -51,6 +70,30 @@ namespace Assets.Scripts
                     LevelEndUi.SetActive(true);
                 }
             }
+        }
+
+        private IEnumerator HackSparks()
+        {
+            while (_hackedProgress < 100)
+            {
+                _hackedProgress += Time.deltaTime * _hackSpeed;
+
+                var flickerwait = UnityEngine.Random.Range(0.1f, 0.5f);
+                Light.color = Color.red;
+                yield return new WaitForSeconds(flickerwait);
+                Light.color = _initialLightColor;
+
+                _hackedProgress += flickerwait * _hackSpeed;
+
+                flickerwait = UnityEngine.Random.Range(0.1f, 0.5f);
+                yield return new WaitForSeconds(flickerwait);
+
+                _hackedProgress += flickerwait * _hackSpeed;
+
+                yield return 0;
+            }
+
+            IsHacked = true;
         }
     }
 }

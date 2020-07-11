@@ -166,6 +166,7 @@ MonoBehaviour:
   targets:
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
   delay: 0
 --- !u!114 &857071019366552840
 MonoBehaviour:
@@ -198,10 +199,10 @@ MonoBehaviour:
   rotationSpeed: 360
   slowdownDistance: 1
   pickNextWaypointDist: 2
-  endReachedDistance: 1
+  endReachedDistance: 0.25
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
-  whenCloseToDestination: 0
+  whenCloseToDestination: 1
   constrainInsideGraph: 0
 --- !u!114 &857071019366552841
 MonoBehaviour:
@@ -251,6 +252,9 @@ MonoBehaviour:
   InputTimeout: 0.5
   Sanity: 10
   connectedButton: {fileID: 0}
+  TerminalWaitTime: 1
+  SanityDrain: 25
+  SanityRegain: 15
   _isHacked: 0
 --- !u!58 &550180584
 CircleCollider2D:
