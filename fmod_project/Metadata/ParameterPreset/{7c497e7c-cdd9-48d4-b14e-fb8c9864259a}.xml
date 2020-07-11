@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="ParameterPreset" id="{7c497e7c-cdd9-48d4-b14e-fb8c9864259a}">
 		<property name="name">
-			<value>isMoving</value>
+			<value>speed</value>
 		</property>
 		<relationship name="folder">
 			<destination>{4be3793a-5565-435e-8c2d-094226f287f9}</destination>
@@ -12,14 +12,11 @@
 		</relationship>
 	</object>
 	<object class="GameParameter" id="{6d947c1b-176e-4b8c-855a-62dc589ac885}">
-		<property name="parameterType">
-			<value>1</value>
-		</property>
-		<property name="maximum">
-			<value>2</value>
-		</property>
 		<property name="initialValue">
-			<value>1</value>
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.69000005722045898</value>
 		</property>
 	</object>
 </objects>
