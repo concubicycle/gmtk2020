@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1256370074209011124}
   - component: {fileID: 1256370074209011123}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 1256370075278820112}
   - component: {fileID: 1256370075278820110}
   - component: {fileID: 854057327}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Terminal_Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Light: {fileID: 1256370074209011123}
-  _isHacked: 0
+  _isHacked: 1
 --- !u!58 &854057327
 CircleCollider2D:
   m_ObjectHideFlags: 0

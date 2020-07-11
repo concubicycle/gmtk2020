@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5553365099064526099}
   - component: {fileID: 5553365099064526101}
   - component: {fileID: 613857637}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Terminal_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5553365099100769949}
   - component: {fileID: 5553365099100769948}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}

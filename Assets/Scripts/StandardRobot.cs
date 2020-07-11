@@ -44,7 +44,7 @@ namespace Assets.Scripts
             if (collision.gameObject.layer == TerminalLayer)
             {
                 var rb =
-                    collision.gameObject.GetComponent<StandardRobot>();
+                    collision.gameObject.GetComponent<Terminal>();
 
                 if (rb.IsHacked)
                 {

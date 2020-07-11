@@ -3,7 +3,7 @@ using UnityEngine.Experimental.GlobalIllumination;
 
 namespace Assets.Scripts
 {
-    class Terminal : MonoBehaviour
+    class Terminal : MonoBehaviour, IHackable
     {
         public const int RobotLayer = 9;
 
@@ -11,6 +11,11 @@ namespace Assets.Scripts
 
         [SerializeField]
         private bool _isHacked = false;
+
+        private void Start()
+        {
+            IsHacked = _isHacked;
+        }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
