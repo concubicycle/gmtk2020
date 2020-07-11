@@ -18,6 +18,8 @@ GameObject:
   - component: {fileID: 857071019366552841}
   - component: {fileID: 158803191354445311}
   - component: {fileID: 550180584}
+  - component: {fileID: 1306562512}
+  - component: {fileID: 1306562511}
   m_Layer: 9
   m_Name: Roomba
   m_TagString: Untagged
@@ -266,6 +268,34 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.647079}
   serializedVersion: 2
   m_Radius: 0.764668
+--- !u!114 &1306562512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857071019366552835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48462d0fb6611e44daf7355fd9703550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 100
+  _healthPoints: 100
+--- !u!114 &1306562511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857071019366552835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52209796c059ba469b0e4c1a8cdb75c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSanity: 100
+  _controlPoints: 100
 --- !u!1001 &207306942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -273,6 +303,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 857071019366552836}
     m_Modifications:
+    - target: {fileID: 529839627, guid: 2776371a1c7d8e34d9a41e54867444b6, type: 3}
+      propertyPath: _sanity
+      value: 
+      objectReference: {fileID: 1306562511}
     - target: {fileID: 1773269801580317132, guid: 2776371a1c7d8e34d9a41e54867444b6,
         type: 3}
       propertyPath: m_Name
@@ -486,6 +520,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2767261616228860653, guid: 69b4c8ebd19e53740ad2b9a5ada417f9,
+        type: 3}
+      propertyPath: _health
+      value: 
+      objectReference: {fileID: 1306562512}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69b4c8ebd19e53740ad2b9a5ada417f9, type: 3}
 --- !u!224 &300511879 stripped
