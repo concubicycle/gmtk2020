@@ -280,6 +280,10 @@ PrefabInstance:
       propertyPath: targets.Array.data[1]
       value: 
       objectReference: {fileID: 1937750371}
+    - target: {fileID: 691734733, guid: f094419d2d34d594ea484e326b493d3f, type: 3}
+      propertyPath: connectedButton
+      value: 
+      objectReference: {fileID: 2014377939}
     - target: {fileID: 6796526385200950148, guid: f094419d2d34d594ea484e326b493d3f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1025,6 +1029,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1644468877 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6796526385200950150, guid: f094419d2d34d594ea484e326b493d3f,
+    type: 3}
+  m_PrefabInstance: {fileID: 93429000}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1899180287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1161,13 +1171,14 @@ GameObject:
   - component: {fileID: 2014377943}
   - component: {fileID: 2014377942}
   - component: {fileID: 2014377941}
+  - component: {fileID: 2014377944}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2014377940
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1230,7 +1241,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2014377942}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2014377944}
+        m_MethodName: SendMessage
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: OnButtonClick
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2014377942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1268,6 +1290,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2014377939}
   m_CullTransparentMesh: 0
+--- !u!114 &2014377944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014377939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67cd72a589cd8074aa1ec04f0423c823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectedRobot: {fileID: 1644468877}
 --- !u!1001 &2016677043
 PrefabInstance:
   m_ObjectHideFlags: 0

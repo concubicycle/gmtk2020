@@ -22,6 +22,9 @@ namespace Assets.Scripts
         public RobotState State = RobotState.Routine;
         public float InputTimeout = 0.5f;
         public float Sanity = 10.0f;
+        public GameObject connectedButton;
+        HackingUI buttonScript;
+        bool isControlled = false;
 
         private Coroutine _currentRoutine = null;
 
@@ -49,6 +52,7 @@ namespace Assets.Scripts
                 if (rb.IsHacked)
                 {
                     IsHacked = true;
+                    EnableButton();
                 }
             }
         }
@@ -58,6 +62,15 @@ namespace Assets.Scripts
             _aiPath = GetComponent<AIPath>();
             _rigidbody = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
+
+            if (connectedButton != null)
+            {
+                buttonScript = connectedButton.GetComponent<HackingUI>();
+            }
+            else
+            {
+                isControlled = true;
+            }
 
             TransitionTo(State);
         }
@@ -101,10 +114,11 @@ namespace Assets.Scripts
 
             while (State == RobotState.Routine)
             {
-                if (Input.GetKey("w") ||
+                if (isControlled &&
+                    (Input.GetKey("w") ||
                      Input.GetKey("s") ||
                      Input.GetKey("d") ||
-                     Input.GetKey("a"))
+                     Input.GetKey("a")))
                 {
                     TransitionTo(RobotState.PlayerControlled);
                 }
@@ -152,7 +166,7 @@ namespace Assets.Scripts
                     inputTimeoutRemaining -= Time.deltaTime;
                 }
 
-                if (inputTimeoutRemaining <= 0)
+                if (inputTimeoutRemaining <= 0 || !isControlled)
                 {
                     TransitionTo(RobotState.Routine);
                 }
@@ -165,6 +179,7 @@ namespace Assets.Scripts
 
         private IEnumerator DoInsane()
         {
+            buttonScript.SendMessage("OnInsane");
             while (State == RobotState.PlayerControlled)
             {
                 yield return 0;
@@ -193,6 +208,17 @@ namespace Assets.Scripts
                 _animator.Play("Base Layer.Robot_Right");
             else
                 _animator.Play("Base Layer.Robot_Left");
+        }
+
+        private void EnableButton()
+        {
+            connectedButton.SetActive(true);
+
+        }
+
+        private void SetConnected(bool connect)
+        {
+            isControlled = connect;
         }
     }
 }
