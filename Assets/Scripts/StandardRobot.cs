@@ -10,7 +10,7 @@ namespace Assets.Scripts
     {
         Routine,
         PlayerControlled,
-        Insane,        
+        Insane,
         Broken
     }
 
@@ -37,7 +37,7 @@ namespace Assets.Scripts
         private void Update()
         {
             // set animation state based on direction of motion
-            
+
         }
 
         private void TransitionTo(RobotState state)
@@ -46,7 +46,7 @@ namespace Assets.Scripts
 
             if (_currentRoutine != null)
             {
-                StopCoroutine(_currentRoutine);                
+                StopCoroutine(_currentRoutine);
             }
 
             switch (state)
@@ -66,7 +66,7 @@ namespace Assets.Scripts
         private IEnumerator DoRoutine()
         {
             _aiPath.enabled = true;
-            
+
             while (State == RobotState.Routine)
             {
                 if (Input.GetKey("w") ||
@@ -160,19 +160,23 @@ namespace Assets.Scripts
             var dprod = Vector2.Dot(vnorm, up);
 
             if (vnorm.x > 0)
+            {
                 if (dprod > 0.70710678118f)
                     _animator.Play("Base Layer.Robot_Up");
                 else if (dprod > -0.70710678118f)
                     _animator.Play("Base Layer.Robot_Right");
                 else
                     _animator.Play("Base Layer.Robot_Down");
+            }
             else
+            {
                 if (dprod > 0.70710678118f)
-                _animator.Play("Base Layer.Robot_Up");
-            else if (dprod > -0.70710678118f)
-                _animator.Play("Base Layer.Robot_Left");
-            else
-                _animator.Play("Base Layer.Robot_Down");            
+                    _animator.Play("Base Layer.Robot_Up");
+                else if (dprod > -0.70710678118f)
+                    _animator.Play("Base Layer.Robot_Left");
+                else
+                    _animator.Play("Base Layer.Robot_Down");
+            }
         }
     }
 }
