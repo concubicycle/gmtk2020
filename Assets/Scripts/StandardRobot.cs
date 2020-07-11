@@ -34,6 +34,12 @@ namespace Assets.Scripts
             TransitionTo(State);
         }
 
+        private void Update()
+        {
+            // set animation state based on direction of motion
+            
+        }
+
         private void TransitionTo(RobotState state)
         {
             State = state;
@@ -70,6 +76,9 @@ namespace Assets.Scripts
                 {
                     TransitionTo(RobotState.PlayerControlled);
                 }
+
+                var vel = new Vector2(_aiPath.velocity.x, _aiPath.velocity.y);
+                SetAnimatorState(vel);
 
                 yield return 0;
             }
@@ -121,6 +130,8 @@ namespace Assets.Scripts
                     TransitionTo(RobotState.Routine);
                 }
 
+                SetAnimatorState(_rigidbody.velocity);
+
                 yield return 0;
             }
         }
@@ -138,6 +149,45 @@ namespace Assets.Scripts
             while (State == RobotState.Broken)
             {
                 yield return 0;
+            }
+        }
+
+        private void SetAnimatorState(Vector2 velocity)
+        {
+            var vnorm = velocity.normalized;
+            var up = Vector2.up;
+
+            var dprod = Vector2.Dot(vnorm, up);
+
+            if (vnorm.x > 0)
+            {
+                if (dprod > 0.70710678118f)
+                {
+                    _animator.Play("Base Layer.Robot_Up");
+                }
+                else if (dprod > -0.70710678118f)
+                {
+                    _animator.Play("Base Layer.Robot_Right");
+                }
+                else
+                {
+                    _animator.Play("Base Layer.Robot_Down");
+                }
+            }
+            else
+            {
+                if (dprod > 0.70710678118f)
+                {
+                    _animator.Play("Base Layer.Robot_Up");
+                }
+                else if (dprod > -0.70710678118f)
+                {
+                    _animator.Play("Base Layer.Robot_Left");
+                }
+                else
+                {
+                    _animator.Play("Base Layer.Robot_Down");
+                }
             }
         }
     }
