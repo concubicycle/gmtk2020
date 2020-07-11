@@ -16,7 +16,7 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-5316576360998312157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51,7 +51,7 @@ MonoBehaviour:
   Min: 1
   Max: 11
   Default: 1
-  Exists: 1
+  Exists: 0
 --- !u!114 &-4496990081470785085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
   lastModified: 637300918757156214
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-3081849544172348099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +138,23 @@ MonoBehaviour:
   lastModified: 637300689279971496
   LoadResult: 0
   FileSizes: []
+  Exists: 1
+--- !u!114 &-2122891420604313885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Robot Walk/isMoving
+  m_EditorClassIdentifier: 
+  Name: isMoving
+  Min: 0
+  Max: 2
+  Default: 0
   Exists: 1
 --- !u!114 &-1635085001654942729
 MonoBehaviour:
@@ -171,7 +188,7 @@ MonoBehaviour:
   Path: event:/SFX/Robot Dialogue
   guid: a05d10a1f77cb34aafa8d8e3494c5bac
   Banks:
-  - {fileID: -3705456595383861577}
+  - {fileID: 7635156877946060390}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -193,17 +210,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 791810543467652940}
-  - {fileID: -3705456595383861577}
+  - {fileID: 7635156877946060390}
   EditorEvents:
   - {fileID: 5352741875785293234}
   - {fileID: -949566513532640543}
   - {fileID: 3362937035326692573}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -3705456595383861577}
+  - {fileID: 7635156877946060390}
   StringsBanks:
   - {fileID: 791810543467652940}
-  stringsBankWriteTime: 637300918757166224
+  stringsBankWriteTime: 637300576249677511
   cacheVersion: 3
 --- !u!114 &791810543467652940
 MonoBehaviour:
@@ -219,7 +236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: fmod_project/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637300918757166224
+  lastModified: 637300576249677511
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -241,7 +258,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &3163410917492794348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,12 +291,12 @@ MonoBehaviour:
   Path: event:/SFX/Robot Walk
   guid: ee3b95406aa12f49b47c4683133ee390
   Banks:
-  - {fileID: -3705456595383861577}
+  - {fileID: 7635156877946060390}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -6643706188773449965}
+  - {fileID: -2122891420604313885}
   MinDistance: 0
   MaxDistance: 0
   Length: 19208
@@ -315,13 +332,13 @@ MonoBehaviour:
   Path: event:/Music/Level 1
   guid: 061bb0d94ce36343ac51b352ed4acb42
   Banks:
-  - {fileID: -3705456595383861577}
+  - {fileID: 7635156877946060390}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -4913579325736987496}
-  - {fileID: 2209862551463744164}
+  - {fileID: 6337099714382689793}
+  - {fileID: 8014702887992657882}
   MinDistance: 0
   MaxDistance: 0
   Length: 88000
@@ -343,6 +360,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &6337099714382689793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Level 1/Level
+  m_EditorClassIdentifier: 
+  Name: Level
+  Min: 1
+  Max: 11
+  Default: 1
+  Exists: 1
 --- !u!114 &7501724487174677419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,3 +394,38 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 0
+--- !u!114 &7635156877946060390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: fmod_project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637300576250137227
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &8014702887992657882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Level 1/Intensity
+  m_EditorClassIdentifier: 
+  Name: Intensity
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
