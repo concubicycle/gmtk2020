@@ -10,12 +10,11 @@ public class Health : MonoBehaviour
 {        
     public event OnKillHandler EntityKilledListeners;
     public event OnHealthChanged HealthChangedListeners;
-
-    public float initialHp = 100.0f;
+        
     public float maxHp = 100.0f;
 
     [SerializeField]
-    private float _healthPoints;
+    private float _healthPoints = 100;
 
     public float HealthPoints
     {
@@ -42,8 +41,8 @@ public class Health : MonoBehaviour
         }
     }
 
-    void Start()
+    void Update()
     {
-        HealthPoints = initialHp;                
+        HealthPoints = _healthPoints;                
     }   
 }
