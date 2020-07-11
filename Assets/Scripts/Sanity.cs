@@ -24,20 +24,17 @@ namespace Assets.Scripts
             }
             set
             {
-                if (_controlPoints <= 0 && value <= 0)
-                    return;
-
                 if (_controlPoints > 0 && value <= 0 && EntityInsaneListeners != null)
-                {
-                    _controlPoints = value;
                     EntityInsaneListeners();
-                    return;
-                }
 
-                _controlPoints = value;
+                if (value <= 0)
+                    _controlPoints = 0;
+                else if (value > maxSanity)
+                    _controlPoints = maxSanity;
+                else
+                    _controlPoints = value;
 
-                if (SanityChangedListeners != null)
-                    SanityChangedListeners(_controlPoints, maxSanity);
+                SanityChangedListeners?.Invoke(_controlPoints, maxSanity);
             }
         }
 
