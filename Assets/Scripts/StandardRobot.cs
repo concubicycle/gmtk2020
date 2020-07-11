@@ -83,30 +83,25 @@ namespace Assets.Scripts
             float inputTimeoutRemaining = InputTimeout;
             _aiPath.enabled = false;
 
-
             while (State == RobotState.PlayerControlled)
             {
                 if (Input.GetKey("w"))
-                {
-                    _animator.Play("Base Layer.Robot_Up");
+                {                    
                     _rigidbody.velocity = new Vector3(0, _aiPath.maxSpeed, 0);
                     inputTimeoutRemaining = InputTimeout;
                 }
                 else if (Input.GetKey("s"))
-                {
-                    _animator.Play("Base Layer.Robot_Down");
+                {                    
                     _rigidbody.velocity = new Vector3(0, -_aiPath.maxSpeed, 0);
                     inputTimeoutRemaining = InputTimeout;
                 }
                 else if (Input.GetKey("d"))
-                {
-                    _animator.Play("Base Layer.Robot_Right");
+                {                    
                     _rigidbody.velocity = new Vector3(_aiPath.maxSpeed, 0, 0);
                     inputTimeoutRemaining = InputTimeout;
                 }
                 else if (Input.GetKey("a"))
-                {
-                    _animator.Play("Base Layer.Robot_Left");
+                {                    
                     _rigidbody.velocity = new Vector3(-_aiPath.maxSpeed, 0, 0);
                     inputTimeoutRemaining = InputTimeout;
                 }
