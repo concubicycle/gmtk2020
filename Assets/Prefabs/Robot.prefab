@@ -243,6 +243,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36fd367b21a5d8a4080fa06fb955e56e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  UpAnimation: Robot_Up
+  RightAnimation: Robot_Right
+  DownAnimation: Robot_Down
+  LeftAnimation: Robot_Left
   State: 0
   InputTimeout: 0.5
   Sanity: 10
@@ -522,17 +526,17 @@ PrefabInstance:
     - target: {fileID: 1773269801599959916, guid: 2776371a1c7d8e34d9a41e54867444b6,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.0285
+      value: 0.033
       objectReference: {fileID: 0}
     - target: {fileID: 1773269801599959916, guid: 2776371a1c7d8e34d9a41e54867444b6,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2.3862
+      value: -2.389
       objectReference: {fileID: 0}
     - target: {fileID: 1773269801599959916, guid: 2776371a1c7d8e34d9a41e54867444b6,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 2.0320618
+      value: 2.0272763
       objectReference: {fileID: 0}
     - target: {fileID: 1773269801599959916, guid: 2776371a1c7d8e34d9a41e54867444b6,
         type: 3}

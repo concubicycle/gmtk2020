@@ -18,6 +18,11 @@ namespace Assets.Scripts
     {
         public const int TerminalLayer = 10;
 
+        public string UpAnimation = "Robot_Up";
+        public string RightAnimation = "Robot_Right";
+        public string DownAnimation = "Robot_Down";
+        public string LeftAnimation = "Robot_Left";
+
 
         public RobotState State = RobotState.Routine;
         public float InputTimeout = 0.5f;
@@ -201,13 +206,13 @@ namespace Assets.Scripts
             var dprod = Vector2.Dot(vnorm, up);
 
             if (dprod > 0.70710678118f)
-                _animator.Play("Base Layer.Robot_Up");
+                _animator.Play("Base Layer." + UpAnimation);
             else if (dprod < -0.70710678118f)
-                _animator.Play("Base Layer.Robot_Down");
+                _animator.Play("Base Layer." + DownAnimation);
             else if (vnorm.x > 0)
-                _animator.Play("Base Layer.Robot_Right");
+                _animator.Play("Base Layer." + RightAnimation);
             else
-                _animator.Play("Base Layer.Robot_Left");
+                _animator.Play("Base Layer." + LeftAnimation);
         }
 
         private void EnableButton()
