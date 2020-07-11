@@ -36,6 +36,8 @@ namespace Assets.Scripts
         private AIPath _aiPath;
         private Rigidbody2D _rigidbody;
         private Animator _animator;
+        private Sanity _sanity;
+        private Health _health;
 
         [SerializeField]
         private bool _isHacked = false;
