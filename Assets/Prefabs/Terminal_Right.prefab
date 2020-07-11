@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5553365099064526098}
   - component: {fileID: 5553365099064526099}
   - component: {fileID: 5553365099064526101}
+  - component: {fileID: 613857637}
   m_Layer: 0
   m_Name: Terminal_Right
   m_TagString: Untagged
@@ -95,6 +96,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c416ab282e828314eab60d1fc780aa2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Light: {fileID: 5553365099100769948}
+  _isHacked: 0
+--- !u!58 &613857637
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5553365099064526096}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.75
 --- !u!1 &5553365099100769946
 GameObject:
   m_ObjectHideFlags: 0

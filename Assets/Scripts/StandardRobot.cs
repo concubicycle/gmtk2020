@@ -14,16 +14,44 @@ namespace Assets.Scripts
         Broken
     }
 
-    class StandardRobot : MonoBehaviour
+    class StandardRobot : MonoBehaviour, IHackable
     {
+        public const int TerminalLayer = 10;
+
+
         public RobotState State = RobotState.Routine;
         public float InputTimeout = 0.5f;
+        public float Sanity = 10.0f;
 
         private Coroutine _currentRoutine = null;
 
         private AIPath _aiPath;
         private Rigidbody2D _rigidbody;
         private Animator _animator;
+
+        [SerializeField]
+        private bool _isHacked = false;
+
+
+        public bool IsHacked
+        {
+            get => _isHacked;
+            set => _isHacked = value;
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.layer == TerminalLayer)
+            {
+                var rb =
+                    collision.gameObject.GetComponent<StandardRobot>();
+
+                if (rb.IsHacked)
+                {
+                    IsHacked = true;
+                }
+            }
+        }
 
         private void Start()
         {
@@ -32,6 +60,16 @@ namespace Assets.Scripts
             _animator = GetComponent<Animator>();
 
             TransitionTo(State);
+        }
+
+        private void Update()
+        {
+            if (Sanity < 0 &&
+                State != RobotState.Broken &&
+                State != RobotState.Insane)
+            {
+                TransitionTo(RobotState.Insane);
+            }
         }
 
         private void TransitionTo(RobotState state)
@@ -63,7 +101,7 @@ namespace Assets.Scripts
 
             while (State == RobotState.Routine)
             {
-                if  (Input.GetKey("w") ||
+                if (Input.GetKey("w") ||
                      Input.GetKey("s") ||
                      Input.GetKey("d") ||
                      Input.GetKey("a"))
@@ -86,22 +124,22 @@ namespace Assets.Scripts
             while (State == RobotState.PlayerControlled)
             {
                 if (Input.GetKey("w"))
-                {                    
+                {
                     _rigidbody.velocity = new Vector3(0, _aiPath.maxSpeed, 0);
                     inputTimeoutRemaining = InputTimeout;
                 }
                 else if (Input.GetKey("s"))
-                {                    
+                {
                     _rigidbody.velocity = new Vector3(0, -_aiPath.maxSpeed, 0);
                     inputTimeoutRemaining = InputTimeout;
                 }
                 else if (Input.GetKey("d"))
-                {                    
+                {
                     _rigidbody.velocity = new Vector3(_aiPath.maxSpeed, 0, 0);
                     inputTimeoutRemaining = InputTimeout;
                 }
                 else if (Input.GetKey("a"))
-                {                    
+                {
                     _rigidbody.velocity = new Vector3(-_aiPath.maxSpeed, 0, 0);
                     inputTimeoutRemaining = InputTimeout;
                 }

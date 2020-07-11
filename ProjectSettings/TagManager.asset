@@ -15,8 +15,8 @@ TagManager:
   - 
   - 
   - AiCollide
-  - 
-  - 
+  - RobotLayer
+  - TerminalLayer
   - 
   - 
   - 
@@ -41,4 +41,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Terminal
+    uniqueID: 1871530795
     locked: 0
