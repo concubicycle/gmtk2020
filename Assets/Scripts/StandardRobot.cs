@@ -27,9 +27,12 @@ namespace Assets.Scripts
         public RobotState State = RobotState.Routine;
         public float InputTimeout = 0.5f;
         public float Sanity = 10.0f;
-        public GameObject connectedButton;
+        public GameObject connectedButton = null;
         HackingUI buttonScript;
         bool isControlled = false;
+
+        public float SanityDrain = 25;
+        public float SanityRegain = 15;
 
         private Coroutine _currentRoutine = null;
 
@@ -69,6 +72,8 @@ namespace Assets.Scripts
             _aiPath = GetComponent<AIPath>();
             _rigidbody = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
+            _sanity = GetComponent<Sanity>();
+            _health = GetComponent<Health>();
 
             if (connectedButton != null)
             {
@@ -133,6 +138,8 @@ namespace Assets.Scripts
                 var vel = new Vector2(_aiPath.velocity.x, _aiPath.velocity.y);
                 SetAnimatorState(vel);
 
+                _sanity.SanityPoints += Time.deltaTime * SanityRegain;
+
                 yield return 0;
             }
         }
@@ -179,7 +186,7 @@ namespace Assets.Scripts
                 }
 
                 SetAnimatorState(_rigidbody.velocity);
-
+                _sanity.SanityPoints -= Time.deltaTime * SanityDrain;
                 yield return 0;
             }
         }
