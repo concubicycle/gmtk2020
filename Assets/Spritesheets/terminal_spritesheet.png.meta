@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 3fe94909abbfd9d44b8c10e76ba54b5c
+guid: eabe1bb8220a6774caa53b03d6793e4d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6498389215557502581
-    second: robot1_ss_0
-  - first:
-      213: 732069485546214398
-    second: robot1_ss_1
-  - first:
-      213: -560203759173038756
-    second: robot1_ss_2
-  - first:
-      213: 4286997537465634380
-    second: robot1_ss_3
+      213: -1536769181843085593
+    second: terminal_spritesheet_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -55,10 +46,10 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 1
-  spritePivot: {x: 0, y: 1}
-  spritePixelsToUnits: 16
-  spriteBorder: {x: 0, y: 0, z: 192, w: 0}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -99,85 +90,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: robot1_ss_0
+      name: terminal_spritesheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 51
+        y: 45
+        width: 25
+        height: 36
+      alignment: 9
+      pivot: {x: 0.50517863, y: 0.482019}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b89377a307511d5a0800000000000000
-      internalID: -6498389215557502581
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: robot1_ss_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef392e48155d82a00800000000000000
-      internalID: 732069485546214398
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: robot1_ss_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c5d07ac26a1c938f0800000000000000
-      internalID: -560203759173038756
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: robot1_ss_3
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c4e0d9dfb897e7b30800000000000000
-      internalID: 4286997537465634380
+      spriteID: 7e6a97e329c4caae0800000000000000
+      internalID: -1536769181843085593
       vertices: []
       indices: 
       edges: []

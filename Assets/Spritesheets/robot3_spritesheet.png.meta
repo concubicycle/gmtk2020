@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: 3fe94909abbfd9d44b8c10e76ba54b5c
+<<<<<<< HEAD
+guid: bb27a165bbbafa14aa12e7e35b18db8c
+TextureImporter:
+  internalIDToNameTable: []
+=======
+guid: cd721fad4d13395499173bdc0e0c5def
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6498389215557502581
-    second: robot1_ss_0
+      213: -342930692503549066
+    second: robot3_spritesheet_0
   - first:
-      213: 732069485546214398
-    second: robot1_ss_1
+      213: 5196408737736345771
+    second: robot3_spritesheet_1
   - first:
-      213: -560203759173038756
-    second: robot1_ss_2
+      213: 4106334902417193730
+    second: robot3_spritesheet_2
   - first:
-      213: 4286997537465634380
-    second: robot1_ss_3
+      213: 1837617548887571870
+    second: robot3_spritesheet_3
+>>>>>>> Fixed error with not having a connected button
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -43,7 +49,11 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<< HEAD
+    filterMode: -1
+=======
     filterMode: 0
+>>>>>>> Fixed error with not having a connected button
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -52,13 +62,17 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+<<<<<<< HEAD
+  spriteMode: 1
+=======
   spriteMode: 2
+>>>>>>> Fixed error with not having a connected button
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 1
-  spritePivot: {x: 0, y: 1}
-  spritePixelsToUnits: 16
-  spriteBorder: {x: 0, y: 0, z: 192, w: 0}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -99,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: robot1_ss_0
+      name: robot3_spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -113,14 +127,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b89377a307511d5a0800000000000000
-      internalID: -6498389215557502581
+      spriteID: 67b4fb22a5aad3bf0800000000000000
+      internalID: -342930692503549066
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robot1_ss_1
+      name: robot3_spritesheet_1
       rect:
         serializedVersion: 2
         x: 64
@@ -134,14 +148,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef392e48155d82a00800000000000000
-      internalID: 732069485546214398
+      spriteID: ba8c288173a5d1840800000000000000
+      internalID: 5196408737736345771
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robot1_ss_2
+      name: robot3_spritesheet_2
       rect:
         serializedVersion: 2
         x: 128
@@ -155,14 +169,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5d07ac26a1c938f0800000000000000
-      internalID: -560203759173038756
+      spriteID: 20b7d5366d1acf830800000000000000
+      internalID: 4106334902417193730
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robot1_ss_3
+      name: robot3_spritesheet_3
       rect:
         serializedVersion: 2
         x: 192
@@ -176,8 +190,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4e0d9dfb897e7b30800000000000000
-      internalID: 4286997537465634380
+      spriteID: e9db772bc67808910800000000000000
+      internalID: 1837617548887571870
       vertices: []
       indices: 
       edges: []
