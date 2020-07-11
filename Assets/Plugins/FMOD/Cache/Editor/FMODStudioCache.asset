@@ -1,6 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7730545420710633536
+--- !u!114 &-7983731643573547281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Level 1/Level
+  m_EditorClassIdentifier: 
+  Name: Level
+  Min: 1
+  Max: 11
+  Default: 1
+  Exists: 1
+--- !u!114 &-7936980092070944477
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -17,6 +34,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &-7730545420710633536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Level 1/Intensity
+  m_EditorClassIdentifier: 
+  Name: Intensity
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &-6643706188773449965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,6 +224,23 @@ MonoBehaviour:
   Max: 2
   Default: 0
   Exists: 1
+--- !u!114 &-1742041186616632540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Robot Walk/speed
+  m_EditorClassIdentifier: 
+  Name: speed
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-1635085001654942729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +273,7 @@ MonoBehaviour:
   Path: event:/SFX/Robot Dialogue
   guid: a05d10a1f77cb34aafa8d8e3494c5bac
   Banks:
-  - {fileID: 1874933125911822435}
+  - {fileID: 2506898359479558668}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -244,17 +295,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 791810543467652940}
-  - {fileID: 1874933125911822435}
+  - {fileID: 2506898359479558668}
   EditorEvents:
   - {fileID: 5352741875785293234}
   - {fileID: -949566513532640543}
   - {fileID: 3362937035326692573}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 1874933125911822435}
+  - {fileID: 2506898359479558668}
   StringsBanks:
   - {fileID: 791810543467652940}
-  stringsBankWriteTime: 637301015880000000
+  stringsBankWriteTime: 637300712899908294
   cacheVersion: 3
 --- !u!114 &791810543467652940
 MonoBehaviour:
@@ -270,7 +321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: fmod_project/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637301015880000000
+  lastModified: 637300712899908294
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -292,7 +343,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &1874933125911822435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,7 +361,7 @@ MonoBehaviour:
   lastModified: 637301015880000000
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &2209862551463744164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,6 +395,24 @@ MonoBehaviour:
   Min: 1
   Max: 11
   Default: 1
+  Exists: 0
+--- !u!114 &2506898359479558668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: fmod_project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637300712900148172
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
 --- !u!114 &2537978133830551427
 MonoBehaviour:
@@ -395,12 +464,12 @@ MonoBehaviour:
   Path: event:/SFX/Robot Walk
   guid: ee3b95406aa12f49b47c4683133ee390
   Banks:
-  - {fileID: 1874933125911822435}
+  - {fileID: 2506898359479558668}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 1324930564440527790}
+  - {fileID: -1742041186616632540}
   MinDistance: 0
   MaxDistance: 0
   Length: 14250
@@ -436,13 +505,13 @@ MonoBehaviour:
   Path: event:/Music/Level 1
   guid: 061bb0d94ce36343ac51b352ed4acb42
   Banks:
-  - {fileID: 1874933125911822435}
+  - {fileID: 2506898359479558668}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 2227449166228153796}
-  - {fileID: -7730545420710633536}
+  - {fileID: -7983731643573547281}
+  - {fileID: -7936980092070944477}
   MinDistance: 0
   MaxDistance: 0
   Length: 88000
