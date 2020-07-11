@@ -16,13 +16,22 @@ MonoBehaviour:
   guid: 061bb0d94ce36343ac51b352ed4acb42
   Banks:
   - {fileID: -1319315130208634333}
+<<<<<<< HEAD
   - {fileID: -4350743590885099667}
+=======
+  - {fileID: 8078978063398459323}
+>>>>>>> sprites issue fixed, gravity drag on pg fixed, sliced third robot sheet
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
+<<<<<<< HEAD
   - {fileID: 7055538152149122562}
   - {fileID: 1391582952173917419}
+=======
+  - {fileID: 6662525961066202899}
+  - {fileID: 3427273804159834845}
+>>>>>>> sprites issue fixed, gravity drag on pg fixed, sliced third robot sheet
   MinDistance: 0
   MaxDistance: 0
   Length: 88000
@@ -132,7 +141,7 @@ MonoBehaviour:
   Min: 1
   Max: 11
   Default: 1
-  Exists: 1
+  Exists: 0
 --- !u!114 &-1319315130208634333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,16 +210,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 5771380022296678713}
-  - {fileID: -4350743590885099667}
+  - {fileID: 8078978063398459323}
   EditorEvents:
   - {fileID: -6698296047481818384}
   - {fileID: 5075986084832510416}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -4350743590885099667}
+  - {fileID: 8078978063398459323}
   StringsBanks:
   - {fileID: 5771380022296678713}
-  stringsBankWriteTime: 637300724491662052
+  stringsBankWriteTime: 637300689279971496
   cacheVersion: 3
 --- !u!114 &169988127387698083
 MonoBehaviour:
@@ -270,6 +279,23 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 72000
+--- !u!114 &3427273804159834845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Level 1/Intensity
+  m_EditorClassIdentifier: 
+  Name: Intensity
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &5075986084832510416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,7 +312,7 @@ MonoBehaviour:
   guid: a05d10a1f77cb34aafa8d8e3494c5bac
   Banks:
   - {fileID: -1319315130208634333}
-  - {fileID: -4350743590885099667}
+  - {fileID: 8078978063398459323}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -308,13 +334,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: fmod_project/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637300724491662052
+  lastModified: 637300689279971496
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 898
   Exists: 1
---- !u!114 &7055538152149122562
+--- !u!114 &6662525961066202899
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -330,6 +356,24 @@ MonoBehaviour:
   Min: 1
   Max: 11
   Default: 1
+  Exists: 1
+--- !u!114 &8078978063398459323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: fmod_project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637300689279971496
+  LoadResult: 0
+  FileSizes: []
   Exists: 1
 --- !u!114 &8608958498906081125
 MonoBehaviour:
@@ -348,7 +392,7 @@ MonoBehaviour:
   lastModified: 637300296343070444
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &8914554469184521259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,4 +409,4 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
