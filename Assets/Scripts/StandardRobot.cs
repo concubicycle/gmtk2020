@@ -30,6 +30,7 @@ namespace Assets.Scripts
         public GameObject connectedButton = null;
         HackingUI buttonScript;
         bool isControlled = false;
+        public float TerminalWaitTime = 0.5f;
 
         public float SanityDrain = 25;
         public float SanityRegain = 15;
@@ -112,6 +113,7 @@ namespace Assets.Scripts
                     StartCoroutine(DoInsane());
                     break;
                 case RobotState.Routine:
+                    _aiPath.enabled = true;
                     StartCoroutine(DoRoutine());
                     break;
                 case RobotState.PlayerControlled:
@@ -122,8 +124,6 @@ namespace Assets.Scripts
 
         private IEnumerator DoRoutine()
         {
-            _aiPath.enabled = true;
-
             while (State == RobotState.Routine)
             {
                 if (isControlled &&
@@ -139,6 +139,13 @@ namespace Assets.Scripts
                 SetAnimatorState(vel);
 
                 _sanity.SanityPoints += Time.deltaTime * SanityRegain;
+
+                if (_aiPath.reachedDestination)
+                {
+                    _aiPath.enabled = false;
+                    yield return new WaitForSeconds(TerminalWaitTime);
+                    _aiPath.enabled = true;
+                }
 
                 yield return 0;
             }
