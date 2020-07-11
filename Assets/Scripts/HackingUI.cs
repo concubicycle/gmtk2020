@@ -22,13 +22,19 @@ public class HackingUI : MonoBehaviour
     {
         if(connectedRobot != null)
         {
+            if(!isActiveOne && controlScript.IsButtonActive())
+            {
+                controlScript.SendMessage("DeconnectActive");
+            }
+
             if (!isActiveOne && !controlScript.IsButtonActive()) { 
                 isActiveOne = true;
                 //mark connected robot somehow as being active, colored light etc
                 controlScript.SendMessage("SetButton", this);
                 robotScript.SendMessage("SetConnected", true);
                 //if we get that far, open camera/room on which the robot is
-            } else
+            } 
+            else
             {
                 DeconnectRobot();
             }

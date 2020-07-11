@@ -17,6 +17,11 @@ public class HackingUIController : MonoBehaviour
         currentButton = null;
     }
 
+    private void DeconnectActive()
+    {
+        currentButton.SendMessage("DeconnectRobot");
+    }
+
     public bool IsButtonActive()
     {
         return currentButton != null;
@@ -26,4 +31,6 @@ public class HackingUIController : MonoBehaviour
     {
         return tB == currentButton;
     }
+
+    
 }
