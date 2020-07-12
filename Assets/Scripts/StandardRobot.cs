@@ -138,6 +138,8 @@ namespace Assets.Scripts
 
             Vector3 lastDestination = _aiPath.destination;
 
+            yield return new WaitForSeconds(0.5f);
+
             while (State == RobotState.Routine)
             {
                 var sanityFulll = (_sanity.maxSanity - _sanity.SanityPoints) < 2;
