@@ -295,6 +295,9 @@ MonoBehaviour:
   LeftAnimation: Scientist_Left
   State: 0
   PatrolStopWaitTime: 1.5
+  SightRayCount: 15
+  SightConeRadius: 0.7853982
+  VisibleInsanityCutoff: 80
 --- !u!95 &48006742
 Animator:
   serializedVersion: 3
