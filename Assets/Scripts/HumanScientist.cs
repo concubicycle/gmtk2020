@@ -66,12 +66,14 @@ namespace Assets.Scripts
                     _aiPath.enabled = true;
                     _patrol.enabled = true;
                     _dest.enabled = false;
+                    _aiPath.maxSpeed = 3;
                     _currentRoutine = StartCoroutine(DoPatrol());
                     break;
                 case ScientistBehavior.Chasing:
                     _patrol.enabled = false;
                     _dest.enabled = true;
                     _dest.target = _targetRobot.GetComponent<Transform>();
+                    _aiPath.maxSpeed = 7;
                     _currentRoutine = StartCoroutine(DoChasing());
                     break;
                 case ScientistBehavior.Recycling:
@@ -132,8 +134,6 @@ namespace Assets.Scripts
                     
                     TransitionTo(ScientistBehavior.Patrolling);
                 }
-
-
 
                 yield return 0;
             }
