@@ -121,6 +121,35 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &80162535 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5553365099064526096, guid: e19f4a3d3c2d4274b9ff0f2849cccd70,
+    type: 3}
+  m_PrefabInstance: {fileID: 1348532591}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &80162540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80162535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Untagged
+  Event: event:/SFX/Hacking Terminal
+  PlayEvent: 5
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &114954410
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,7 +174,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 114954410}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.45, y: -4.68, z: 0}
+  m_LocalPosition: {x: 1.37, y: -4.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1502756103}
@@ -406,6 +435,58 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InitialWait: 3
+--- !u!114 &597920466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597920460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Untagged
+  Event: event:/SFX/Hacking Terminal
+  PlayEvent: 5
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!1 &797252875 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1256370075278820113, guid: c205df7238069594ca1a7717e0e86ca5,
+    type: 3}
+  m_PrefabInstance: {fileID: 513041309}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &797252880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797252875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Untagged
+  Event: event:/SFX/Hacking Terminal
+  PlayEvent: 5
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &843510556
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,7 +931,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACAn+vHobdOTAIAAPMEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VEtz2jAQ/iuMzqVjKGlCb615pAcSJrSTiy9CWmMNsuTRI0AY/ntXso0dOjmx7Pft7rcP+UyEshUwp83SCL7SHMiPAQk2+TLowEc40p1WG/EOLedVcFcEEo2cF+qERv8ohFldgjOC/VQ7GcgJOr0SuTblnO8g1dZZdOdUWkDIaBeiFbrOA3LEn+E0hJzQGt8H6x2taTK4oMlAOTAdtSW2tJrlFZO0rIAHyR15NG7Yo5qmsJmGEYQzLaWwjRLiTlXsNKWV9dgHErig2FksH/gFiF3hgsp+8HOeW3CNJENPM2FwQHVW8kvXUyup3de63qj0oc747nvUVCdd/YcPRxHOjS4f27qjJNRwhWD7F3pi1LreWPvu2UfhXh2o3NOthNcC1JNeGu0VR9AZH0K9hfGs+3ttLS2A7Tt/LbV1tnV99fl2QhOX2P4xlaLcBujrpHZspI4Dj7sHg6v5jYrjZdgmBXqDjL8W/tBd/4QaYCGMdQg1baqgb6u9CVSyQCOMnnmXaqPA9BNUoKh0pzWmcbc7vME+j1rQ8Fia4g3WvoGbkOju+ElyA6314botW+jDCmzx7J0UCrr5B+AJ55RqpeoT67fUhm28ySnrhe284B9vizxM2Hb8MMkTzoDfT8fDfMRhmmyBT1hOv91NSDw+obBPKte10GY8uDXVJVd4aO03ZLA0tIrnzg09LMV7qW3HFCrXG2YA1HOd4SocDBbBZ8nnXOCANuCcUHHf5JwRqdkeeHZNlMVO50dnaNZlyUgl3rQLnoyk8aORkQu5/ANQSwMEFAAACAgAAICf6/74SmBtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTVUVBKL0osyCgGihiCOKWZKSB2tJKFSXKSkYVJmkFKcmqKuaWRbpphSqqlQVJqiklyWqKxqYlSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAICf68eht05MAgAA8wQAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAICf6/74SmBtAAAAeAAAAAkAJAAAAAAAAAAAAAAAmQIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABRAwAAAAA=
+    dataString: UEsDBBQAAAgIAAAIIewJNpkHTAIAAPUEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VEtz2jAQ/iuMzqVjKGlCb615pAcSJrSTiy9CWmMNsuTRI0AY/ntXso0dOjmx7Pft7rcP+UyEshUwp83SCL7SHMiPAQk2+TLowEc40p1WG/EOLedVcFcEEo2cF+qERv8ohFldgjOC/VQ7GcgJOr0SuTblnO8g1dZZdOdUWkDIaBeiFbrOA3LEn+E0hJzQGt8H6x2taTK4oMlAOTAdtSW2tJrlFZO0rIAHyR15NG7Yo5qmsJmGEYQzLaWwjRLiTlXsNKWV9dgHErig2FksH/gFiF3hgsp+8HOeW3CNJENPM2FwQHVW8kvXUyup3de63qj0oc747nvUVCdd/YcPRxHOjS4f27qjJNRwhWD7F3pi1LreWPvu2UfhXh2o3NOthNcC1JNeGu0VR9AZH0K9hfGs+3ttLS2A7Tt/LbV1tnV99fl2QhOX2P4xlaLcBujrpHZspI4Dj7sHg6v5jYrjZdgmBXqDjL8W/tBd/4QaYCGMdQg1baqgb6u9CVSyQCOMnnmXaqPA9BNUoKh0pzWmcbc7vME+j1rQ8Fia4g3WvoGbkOju+ElyA6314botW+jDCmzx7J0Uqp8sIE84qFQrVd+YvUFD3MabnLJ+3M4L/vG6yMOEbccPkzzhDPj9dDzMRxymyRb4hOX0292ExPMTCjulcl1LbQaEe1PdVSg8tfYrMlgaWsWD54YeluK91LZjCpXrDTMA6rnOcFUOBovgw+RzLnBEG3BOqLhxcs6I1GwPPLsmymKr86MzNOuyZKQSb9oFT0bS+NnIyIVc/gFQSwMEFAAACAgAAAgh7P74SmBtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTVUVBKL0osyCgGihiCOKWZKSB2tJKFSXKSkYVJmkFKcmqKuaWRbpphSqqlQVJqiklyWqKxqYlSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAAgh7Ak2mQdMAgAA9QQAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAAgh7P74SmBtAAAAeAAAAAkAJAAAAAAAAAAAAAAAmQIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABRAwAAAAA=
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -882,7 +963,7 @@ MonoBehaviour:
   heuristic: 2
   heuristicScale: 1
   threadCount: 1
-  maxFrameTime: 1
+  maxFrameTime: 10
   batchGraphUpdates: 0
   graphUpdateBatchingInterval: 0.2
   euclideanEmbedding:

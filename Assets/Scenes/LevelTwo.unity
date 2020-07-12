@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -476,6 +476,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c205df7238069594ca1a7717e0e86ca5, type: 3}
+--- !u!1 &507719530 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1256370075278820113, guid: c205df7238069594ca1a7717e0e86ca5,
+    type: 3}
+  m_PrefabInstance: {fileID: 507719529}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &507719531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507719530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Untagged
+  Event: event:/SFX/Hacking Terminal
+  PlayEvent: 5
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &590028571
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,6 +723,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c205df7238069594ca1a7717e0e86ca5, type: 3}
+--- !u!1 &630300076 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1256370075278820113, guid: c205df7238069594ca1a7717e0e86ca5,
+    type: 3}
+  m_PrefabInstance: {fileID: 630300075}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &630300077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 630300076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Untagged
+  Event: event:/SFX/Hacking Terminal
+  PlayEvent: 5
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &869824329
 GameObject:
   m_ObjectHideFlags: 0
@@ -959,6 +1017,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 213d24d121fbcd2468850ba53d9583f3, type: 3}
+--- !u!1 &1035134084 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 298379691024221068, guid: 213d24d121fbcd2468850ba53d9583f3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1035134083}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1035134085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035134084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Untagged
+  Event: event:/SFX/Hacking Terminal
+  PlayEvent: 5
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1 &1222272440
 GameObject:
   m_ObjectHideFlags: 0
