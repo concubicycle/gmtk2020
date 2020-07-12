@@ -132,7 +132,9 @@ namespace Assets.Scripts
                 {
                     var robot = _targetRobot.GetComponent<StandardRobot>();
                     robot.IsHacked = false;
-                    
+
+                    yield return new WaitForSeconds(1.0f);
+
                     TransitionTo(ScientistBehavior.Patrolling);
                 }
 
@@ -140,26 +142,31 @@ namespace Assets.Scripts
             }
         }
 
-        private void DetectMadRobots()
+        private bool DetectMadRobots()
         {
-            float theta = 0;
             float thetaInc = SightConeRadius / SightRayCount;
 
             // forward ray
             // Cast a ray straight down.
             RaycastHit2D hit = Physics2D.Raycast(transform.position, _forward);
-            CheckHit(hit);
+
+            if (CheckHit(hit))
+                return true;
             
             for (int i = 1; i < SightRayCount; ++i)
             {
                 var ray = Vector2Extensions.RotateVector(_forward, i * thetaInc);
                 hit = Physics2D.Raycast(transform.position, ray);
-                CheckHit(hit);
+                if (CheckHit(hit))
+                    return true;
 
                 ray = Vector2Extensions.RotateVector(_forward, -i * thetaInc);
                 hit = Physics2D.Raycast(transform.position, ray);
-                CheckHit(hit);
+                if (CheckHit(hit))
+                    return true;
             }
+
+            return false;
         }
 
         private bool CheckHit(RaycastHit2D hit)
