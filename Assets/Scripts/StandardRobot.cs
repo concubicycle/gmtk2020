@@ -127,6 +127,8 @@ namespace Assets.Scripts
             float timeSinceDestinationCutoff = 1.0f;
             float timeSinceDestination = timeSinceDestinationCutoff + 1.0f;
 
+            Vector3 lastDestination = _aiPath.destination;
+
             while (State == RobotState.Routine)
             {
                 if (isControlled &&
@@ -141,11 +143,9 @@ namespace Assets.Scripts
                 var vel = new Vector2(_aiPath.velocity.x, _aiPath.velocity.y);
                 SetAnimatorState(vel);
 
-                var toDest = _aiPath.destination - _aiPath.position;
-
-                if (toDest.sqrMagnitude < 5 && timeSinceDestination > timeSinceDestinationCutoff)
+                if (lastDestination != _aiPath.destination)
                 {
-                    timeSinceDestination = 0;
+                    lastDestination = _aiPath.destination;
                     _aiPath.enabled = false;
                     yield return new WaitForSeconds(TerminalWaitTime);
                     _aiPath.enabled = true;

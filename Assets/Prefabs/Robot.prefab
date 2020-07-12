@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 2
-  radius: 0.5
+  radius: 1
   height: 2
   repathRate: 0.5
   canSearch: 1
@@ -296,9 +296,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.58427763}
+  m_Offset: {x: 0.05257845, y: -0.58427763}
   serializedVersion: 2
-  m_Radius: 1.2129569
+  m_Radius: 0.9951329
 --- !u!114 &1851151077
 MonoBehaviour:
   m_ObjectHideFlags: 0
