@@ -1232,6 +1232,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terminal_Left
       objectReference: {fileID: 0}
+    - target: {fileID: 6424358563399262862, guid: 9034738a1f82ea64c85270b874cc44c5,
+        type: 3}
+      propertyPath: IsVictoryTerminal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6424358563399262862, guid: 9034738a1f82ea64c85270b874cc44c5,
+        type: 3}
+      propertyPath: LevelEndUi
+      value: 
+      objectReference: {fileID: 2041615303}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9034738a1f82ea64c85270b874cc44c5, type: 3}
 --- !u!1 &1912765439
@@ -1493,6 +1503,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afb1c78e939ff2d499a6d7c4dd2bd4eb, type: 3}
+--- !u!1 &2041615303 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5783497986135369599, guid: a2ef71bf0101e064182ce5e8c09b5917,
+    type: 3}
+  m_PrefabInstance: {fileID: 5783497985761762503}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5783497985761762503
 PrefabInstance:
   m_ObjectHideFlags: 0
