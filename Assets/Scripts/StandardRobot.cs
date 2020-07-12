@@ -34,6 +34,7 @@ namespace Assets.Scripts
 
         public float SanityDrain = 25;
         public float SanityRegain = 15;
+        public UnityEngine.Experimental.Rendering.Universal.Light2D Light = null;
 
         private Coroutine _currentRoutine = null;
 
@@ -47,10 +48,18 @@ namespace Assets.Scripts
         private bool _isHacked = false;
 
         
+
+
         public bool IsHacked
         {
             get => _isHacked;
-            set => _isHacked = value;
+            set
+            {
+                _isHacked = value;
+                isControlled = false;
+                connectedButton.SetActive(value);
+                Light.gameObject.SetActive(value);
+            }
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -156,7 +165,6 @@ namespace Assets.Scripts
                 {
                     timeSinceDestination += Time.deltaTime;
                 }
-                
 
                 _sanity.SanityPoints += Time.deltaTime * SanityRegain;
 
@@ -255,7 +263,6 @@ namespace Assets.Scripts
             {
                 connectedButton.SetActive(true);
             }
-
         }
 
         private void SetConnected(bool connect)
