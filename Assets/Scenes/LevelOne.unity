@@ -364,35 +364,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91681056470634b42a09677798dc49ac, type: 3}
---- !u!1 &227533261 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6424358563399262860, guid: 9034738a1f82ea64c85270b874cc44c5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1911566098}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &227533266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 227533261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Untagged
-  Event: event:/SFX/Hacking Terminal
-  PlayEvent: 5
-  StopEvent: 6
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!1001 &247469327
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -898,75 +869,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5553365099064526096, guid: e19f4a3d3c2d4274b9ff0f2849cccd70,
-        type: 3}
-      propertyPath: m_Name
-      value: Terminal_Right
-      objectReference: {fileID: 0}
-    - target: {fileID: 5553365099064526098, guid: e19f4a3d3c2d4274b9ff0f2849cccd70,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.4648113
-      objectReference: {fileID: 0}
-    - target: {fileID: 5553365099064526098, guid: e19f4a3d3c2d4274b9ff0f2849cccd70,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.5517757
-      objectReference: {fileID: 0}
-    - target: {fileID: 5553365099064526098, guid: e19f4a3d3c2d4274b9ff0f2849cccd70,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5553365099064526098, guid: e19f4a3d3c2d4274b9ff0f2849cccd70,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5553365099064526098, guid: e19f4a3d3c2d4274b9ff0f2849cccd70,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5553365099064526098, guid: e19f4a3d3c2d4274b9ff0f2849cccd70,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5553365099064526098, guid: e19f4a3d3c2d4274b9ff0f2849cccd70,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5553365099064526098, guid: e19f4a3d3c2d4274b9ff0f2849cccd70,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5553365099064526098, guid: e19f4a3d3c2d4274b9ff0f2849cccd70,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5553365099064526098, guid: e19f4a3d3c2d4274b9ff0f2849cccd70,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5553365099064526098, guid: e19f4a3d3c2d4274b9ff0f2849cccd70,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5553365099064526099, guid: e19f4a3d3c2d4274b9ff0f2849cccd70,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 7721325272664706658, guid: e19f4a3d3c2d4274b9ff0f2849cccd70,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 9
+      propertyPath: m_LocalPosition.x
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 7721325272664706658, guid: e19f4a3d3c2d4274b9ff0f2849cccd70,
         type: 3}
@@ -975,8 +881,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7721325272664706658, guid: e19f4a3d3c2d4274b9ff0f2849cccd70,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.5
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7721325272664706658, guid: e19f4a3d3c2d4274b9ff0f2849cccd70,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7721325272664706658, guid: e19f4a3d3c2d4274b9ff0f2849cccd70,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7721325272664706658, guid: e19f4a3d3c2d4274b9ff0f2849cccd70,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7721325272664706658, guid: e19f4a3d3c2d4274b9ff0f2849cccd70,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7721325272664706658, guid: e19f4a3d3c2d4274b9ff0f2849cccd70,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7721325272664706658, guid: e19f4a3d3c2d4274b9ff0f2849cccd70,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7721325272664706658, guid: e19f4a3d3c2d4274b9ff0f2849cccd70,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7721325272664706658, guid: e19f4a3d3c2d4274b9ff0f2849cccd70,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7721325273362435876, guid: e19f4a3d3c2d4274b9ff0f2849cccd70,
+        type: 3}
+      propertyPath: m_Name
+      value: Terminal_Right
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e19f4a3d3c2d4274b9ff0f2849cccd70, type: 3}
@@ -1100,37 +1051,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1527847995 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4782035823947858674, guid: 91681056470634b42a09677798dc49ac,
-    type: 3}
-  m_PrefabInstance: {fileID: 148389146}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1527847999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1527847995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Untagged
-  Event: event:/SFX/Hacking Terminal
-  PlayEvent: 5
-  StopEvent: 6
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params:
-  - Name: isHacked
-    Value: 0
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!1 &1665102464
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,35 +1162,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.0799894, y: 2.2693596}
   m_EdgeRadius: 0
---- !u!1 &1786670290 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7721325273362435876, guid: e19f4a3d3c2d4274b9ff0f2849cccd70,
-    type: 3}
-  m_PrefabInstance: {fileID: 1348532591}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1786670294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1786670290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: Untagged
-  Event: event:/SFX/Hacking Terminal
-  PlayEvent: 5
-  StopEvent: 6
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
 --- !u!1001 &1911566098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1337,11 +1228,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Terminal_Left
-      objectReference: {fileID: 0}
-    - target: {fileID: 6424358563399262863, guid: 9034738a1f82ea64c85270b874cc44c5,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -1.11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9034738a1f82ea64c85270b874cc44c5, type: 3}
