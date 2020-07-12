@@ -34,6 +34,7 @@ namespace Assets.Scripts
 
         public float SanityDrain = 25;
         public float SanityRegain = 15;
+        public UnityEngine.Experimental.Rendering.Universal.Light2D Light = null;
 
         private Coroutine _currentRoutine = null;
 
@@ -47,6 +48,8 @@ namespace Assets.Scripts
         private bool _isHacked = false;
 
         
+
+
         public bool IsHacked
         {
             get => _isHacked;
@@ -55,6 +58,7 @@ namespace Assets.Scripts
                 _isHacked = value;
                 isControlled = false;
                 connectedButton.SetActive(value);
+                Light.gameObject.SetActive(value);
             }
         }
 
