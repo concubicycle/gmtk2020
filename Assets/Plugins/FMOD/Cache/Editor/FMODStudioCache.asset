@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9143724295994415005
+--- !u!114 &-7556344929212846766
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,15 +9,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Soundtrack/Intensity
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Level 1
   m_EditorClassIdentifier: 
-  Name: Intensity
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-9128166949657239769
+  Path: event:/Music/Level 1
+  guid: 061bb0d94ce36343ac51b352ed4acb42
+  Banks:
+  - {fileID: -7339258744624957901}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 5548867636291226571}
+  - {fileID: -840760056570464545}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 88000
+--- !u!114 &-7339258744624957901
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -31,7 +39,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: fmod_project/Build/Desktop/Master.bank
   SubDir: 
-  lastModified: 637301566680000000
+  lastModified: 637301390401675989
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -79,92 +87,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: fmod_project/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637301566680000000
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &-7983731643573547281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level 1/Level
-  m_EditorClassIdentifier: 
-  Name: Level
-  Min: 1
-  Max: 11
-  Default: 1
-  Exists: 1
---- !u!114 &-7936980092070944477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level 1/Intensity
-  m_EditorClassIdentifier: 
-  Name: Intensity
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &-7847183518620090861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Hacking Terminal/isBeingHacked
-  m_EditorClassIdentifier: 
-  Name: isBeingHacked
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-7730545420710633536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level 1/Intensity
-  m_EditorClassIdentifier: 
-  Name: Intensity
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-7605674463915664153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Robot Walk/speed
   m_EditorClassIdentifier: 
@@ -172,42 +94,8 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 0
---- !u!114 &-7145487129517561491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level 1/Intensity
-  m_EditorClassIdentifier: 
-  Name: Intensity
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-7108497292051977925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level 1/Intensity
-  m_EditorClassIdentifier: 
-  Name: Intensity
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-7088147654875002152
+  Exists: 1
+--- !u!114 &-840760056570464545
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -224,93 +112,7 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
---- !u!114 &-7084766050416734421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Robot Walk/speed
-  m_EditorClassIdentifier: 
-  Name: speed
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &-6719741646093677336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: fmod_project/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637301347664226640
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &-6643706188773449965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Robot Walk/isMoving
-  m_EditorClassIdentifier: 
-  Name: isMoving
-  Min: 0
-  Max: 2
-  Default: 0
-  Exists: 0
---- !u!114 &-6632102559645764276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level 1/Level
-  m_EditorClassIdentifier: 
-  Name: Level
-  Min: 1
-  Max: 11
-  Default: 1
-  Exists: 1
---- !u!114 &-6323188808732936183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level 1/Intensity
-  m_EditorClassIdentifier: 
-  Name: Intensity
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &-6219224413936529008
+--- !u!114 &-416559145450978577
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -751,16 +553,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/UI/UI Select
+  m_Name: event:/SFX/Hacking Terminal
   m_EditorClassIdentifier: 
-  Path: event:/UI/UI Select
-  guid: 056d33759093bd4f99708895d46e3c14
+  Path: event:/SFX/Hacking Terminal
+  guid: 4b684bb3d5fa3242a334ef89289a9db6
   Banks:
   - {fileID: 2832527534591495334}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 8745401276384683540}
   MinDistance: 0
   MaxDistance: 0
   Length: 783
@@ -1010,12 +813,12 @@ MonoBehaviour:
   - {fileID: 791810543467652940}
   - {fileID: 2832527534591495334}
   EditorEvents:
-  - {fileID: 5352741875785293234}
-  - {fileID: -949566513532640543}
-  - {fileID: 3362937035326692573}
-  - {fileID: -2021275103592746831}
-  - {fileID: 3010556948432863587}
-  - {fileID: 7137573525498737305}
+  - {fileID: 98725902521317974}
+  - {fileID: -7556344929212846766}
+  - {fileID: -85489036040377668}
+  - {fileID: 6394179668850499663}
+  - {fileID: 5089547581112701725}
+  - {fileID: 5916867506055360226}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2832527534591495334}
@@ -1023,7 +826,7 @@ MonoBehaviour:
   - {fileID: 791810543467652940}
   stringsBankWriteTime: 637301780700000000
   cacheVersion: 3
---- !u!114 &271172829182535135
+--- !u!114 &98725902521317974
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1534,10 +1337,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Hacking Terminal
+  m_Name: event:/UI/UI Select
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Hacking Terminal
-  guid: 4b684bb3d5fa3242a334ef89289a9db6
+  Path: event:/UI/UI Select
+  guid: 056d33759093bd4f99708895d46e3c14
   Banks:
   - {fileID: 2832527534591495334}
   IsStream: 0
@@ -1547,8 +1350,8 @@ MonoBehaviour:
   - {fileID: 8668457915285171777}
   MinDistance: 0
   MaxDistance: 0
-  Length: 2611
---- !u!114 &3163410917492794348
+  Length: 783
+--- !u!114 &4189524669531092145
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1558,14 +1361,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level 1/Level
+  m_Name: parameter:/Soundtrack/Level
   m_EditorClassIdentifier: 
   Name: Level
   Min: 1
   Max: 11
   Default: 1
   Exists: 1
---- !u!114 &3265691757323737081
+--- !u!114 &5089547581112701725
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1610,10 +1413,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Robot Walk
+  m_Name: event:/Music/Soundtrack
   m_EditorClassIdentifier: 
-  Path: event:/SFX/Robot Walk
-  guid: ee3b95406aa12f49b47c4683133ee390
+  Path: event:/Music/Soundtrack
+  guid: a96ece7b8b717f49bcdb88113df4bfdd
   Banks:
   - {fileID: 2832527534591495334}
   IsStream: 1
@@ -1623,43 +1426,8 @@ MonoBehaviour:
   - {fileID: 2510867990784440712}
   MinDistance: 0
   MaxDistance: 0
-  Length: 14250
---- !u!114 &3441532763270756109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Hacking Terminal/isHacked
-  m_EditorClassIdentifier: 
-  Name: isHacked
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &3523114270227887067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: fmod_project/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637301592826634513
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &3957055129931830344
+  Length: 226000
+--- !u!114 &5548867636291226571
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1676,7 +1444,7 @@ MonoBehaviour:
   Max: 11
   Default: 1
   Exists: 1
---- !u!114 &3977235892123372320
+--- !u!114 &5916867506055360226
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1874,10 +1642,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Level 1
+  m_Name: event:/SFX/Robot Walk
   m_EditorClassIdentifier: 
-  Path: event:/Music/Level 1
-  guid: 061bb0d94ce36343ac51b352ed4acb42
+  Path: event:/SFX/Robot Walk
+  guid: ee3b95406aa12f49b47c4683133ee390
   Banks:
   - {fileID: 2832527534591495334}
   IsStream: 1
@@ -1888,163 +1656,8 @@ MonoBehaviour:
   - {fileID: 883168218040392160}
   MinDistance: 0
   MaxDistance: 0
-  Length: 88000
---- !u!114 &5372102710806332659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: fmod_project/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637300576250137227
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &5527757171522004846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Hacking Terminal/isHacked
-  m_EditorClassIdentifier: 
-  Name: isHacked
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &5622723449096796061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level 1/Intensity
-  m_EditorClassIdentifier: 
-  Name: Intensity
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &5794984038008055097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Robot Walk/isMoving
-  m_EditorClassIdentifier: 
-  Name: isMoving
-  Min: 0
-  Max: 2
-  Default: 0
-  Exists: 0
---- !u!114 &6250347807214730504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Robot Walk/speed
-  m_EditorClassIdentifier: 
-  Name: speed
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &6337099714382689793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level 1/Level
-  m_EditorClassIdentifier: 
-  Name: Level
-  Min: 1
-  Max: 11
-  Default: 1
-  Exists: 1
---- !u!114 &6719717181350277246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level 1/Intensity
-  m_EditorClassIdentifier: 
-  Name: Intensity
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 1
---- !u!114 &6752627768106867839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: fmod_project/Build/Desktop/Master.bank
-  SubDir: 
-  lastModified: 637301132583643851
-  LoadResult: 0
-  FileSizes: []
-  Exists: 0
---- !u!114 &7099894699458492522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level 1/Level
-  m_EditorClassIdentifier: 
-  Name: Level
-  Min: 1
-  Max: 11
-  Default: 1
-  Exists: 1
---- !u!114 &7137573525498737305
+  Length: 14250
+--- !u!114 &6394179668850499663
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2054,10 +1667,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/Soundtrack
+  m_Name: event:/SFX/Robot Dialogue
   m_EditorClassIdentifier: 
-  Path: event:/Music/Soundtrack
-  guid: a96ece7b8b717f49bcdb88113df4bfdd
+  Path: event:/SFX/Robot Dialogue
+  guid: a05d10a1f77cb34aafa8d8e3494c5bac
   Banks:
   - {fileID: 2832527534591495334}
   IsStream: 1
@@ -2068,42 +1681,8 @@ MonoBehaviour:
   - {fileID: -5307101446998531462}
   MinDistance: 0
   MaxDistance: 0
-  Length: 226000
---- !u!114 &7189837567553128081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Level 1/Intensity
-  m_EditorClassIdentifier: 
-  Name: Intensity
-  Min: 0
-  Max: 1
-  Default: 0
-  Exists: 0
---- !u!114 &7501724487174677419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Robot Walk/isMoving
-  m_EditorClassIdentifier: 
-  Name: isMoving
-  Min: 0
-  Max: 2
-  Default: 0
-  Exists: 0
---- !u!114 &7635156877946060390
+  Length: 8000
+--- !u!114 &8269793344492634865
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2113,15 +1692,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
-  Path: fmod_project/Build/Desktop/Master.bank
+  Path: fmod_project/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637300576250137227
+  lastModified: 637301390401086336
   LoadResult: 0
-  FileSizes: []
+  FileSizes:
+  - Name: Desktop
+    Value: 1186
   Exists: 1
---- !u!114 &7689287301749301928
+--- !u!114 &8745401276384683540
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
