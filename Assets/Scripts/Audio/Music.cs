@@ -33,7 +33,11 @@ public class Music : MonoBehaviour
 
         var sanityAvg = FindObjectOfType<SanityAverage>();
 		Intensity = 1-sanityAvg.AverageSanity/100;
-        MusicEvent.setParameterByName("Intensity", Intensity);
+
+        if (Intensity!=1) {
+            MusicEvent.setParameterByName("Intensity", Intensity);
+        }
+
         MusicEvent.setParameterByName("Level", currentLevel);
     }
 

@@ -98,9 +98,18 @@
 	</object>
 	<object class="MixerBusPanner" id="{17414ca4-7da5-4aa1-8f32-e0c7b97c12b3}" />
 	<object class="MultiSound" id="{55673cbf-d793-4fb2-b114-6f1a08b3cf78}">
+		<property name="triggerProbabilityEnabled">
+			<value>true</value>
+		</property>
+		<property name="triggerProbability">
+			<value>25</value>
+		</property>
 		<property name="length">
 			<value>8</value>
 		</property>
+		<relationship name="modulators">
+			<destination>{35e7d6c9-e27f-4855-848f-033dc20d5746}</destination>
+		</relationship>
 		<relationship name="sounds">
 			<destination>{4605939d-5e35-48af-ab19-5c9e0fd28ecd}</destination>
 			<destination>{b0f6c51e-8d54-4ebc-97f5-485391853373}</destination>
@@ -134,7 +143,7 @@
 			<value>0</value>
 		</property>
 		<property name="length">
-			<value>3.7833007332773887</value>
+			<value>0.84083044982698962</value>
 		</property>
 		<property name="triggerProbabilityEnabled">
 			<value>true</value>
@@ -154,7 +163,7 @@
 			<value>0</value>
 		</property>
 		<property name="length">
-			<value>8</value>
+			<value>1.7923875432525964</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{fef523ad-56df-4405-aef4-ab94c1bdd397}</destination>
@@ -168,7 +177,7 @@
 			<value>0</value>
 		</property>
 		<property name="length">
-			<value>5.7471841888236206</value>
+			<value>1.3024221453287197</value>
 		</property>
 		<property name="triggerProbabilityEnabled">
 			<value>true</value>
@@ -190,6 +199,11 @@
 	</object>
 	<object class="MixerBusPanner" id="{108ee29b-ccc6-4038-9592-cd34d3143da4}" />
 	<object class="MixerBusFader" id="{caa742a1-085c-46ab-9234-6f813a1db803}" />
+	<object class="RandomizerModulator" id="{35e7d6c9-e27f-4855-848f-033dc20d5746}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>startOffset</value>
+		</property>
+	</object>
 	<object class="SingleSound" id="{4605939d-5e35-48af-ab19-5c9e0fd28ecd}">
 		<relationship name="audioFile">
 			<destination>{d6584225-ec87-4821-8b5e-8244d1f92d9c}</destination>
