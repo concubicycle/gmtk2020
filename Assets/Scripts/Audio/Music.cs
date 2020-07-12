@@ -21,7 +21,18 @@ public class Music : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		var sanityAvg = FindObjectOfType<SanityAverage>();
+		Intensity = 1-sanityAvg.AverageSanity/100;
+		print(Intensity);
         MusicEvent.setParameterByName("Intensity", Intensity);
         MusicEvent.setParameterByName("Level", currentLevel);
     }
 }
+
+
+// var sanityAvg = FindObjectOfType<SanityAverage>();
+// var val = sanityAvg.AverageSanity;
+   
+// var robot = FindObjectOfType<StandardRobot>();
+// var sanity = robot.GetComponent<Sanity>();
+// var points = sanity.SanityPoints;
