@@ -193,7 +193,7 @@ namespace Assets.Scripts
                 {
                     var state = _animator.GetCurrentAnimatorStateInfo(0);
                     _animator.Play(state.nameHash, 0, 0);
-                    _animator.speed = 0;
+                    //_animator.speed = 0;
                     _rigidbody.velocity = Vector3.zero;
                     inputTimeoutRemaining -= Time.deltaTime;
                 }
