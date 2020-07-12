@@ -108,16 +108,16 @@ namespace Assets.Scripts
             }
 
             switch (state)
-            {
+            {   
                 case RobotState.Insane:
-                    StartCoroutine(DoInsane());
+                    _currentRoutine = StartCoroutine(DoInsane());
                     break;
                 case RobotState.Routine:
                     _aiPath.enabled = true;
-                    StartCoroutine(DoRoutine());
+                    _currentRoutine = StartCoroutine(DoRoutine());
                     break;
                 case RobotState.PlayerControlled:
-                    StartCoroutine(DoPlayerControlled());
+                    _currentRoutine = StartCoroutine(DoPlayerControlled());
                     break;
             }
         }
@@ -131,7 +131,9 @@ namespace Assets.Scripts
 
             while (State == RobotState.Routine)
             {
-                if (isControlled &&
+                var sanityFulll = (_sanity.maxSanity - _sanity.SanityPoints) < 2;
+
+                if (sanityFulll && isControlled &&
                     (Input.GetKey("w") ||
                      Input.GetKey("s") ||
                      Input.GetKey("d") ||
@@ -199,6 +201,11 @@ namespace Assets.Scripts
                 }
 
                 if (inputTimeoutRemaining <= 0 || !isControlled)
+                {
+                    TransitionTo(RobotState.Routine);
+                }
+
+                if (_sanity.SanityPoints <= 0)
                 {
                     TransitionTo(RobotState.Routine);
                 }
