@@ -11,16 +11,15 @@ GameObject:
   - component: {fileID: 8601047821340514730}
   - component: {fileID: 4635921226440290883}
   - component: {fileID: 834285051031018052}
-  - component: {fileID: 9023152100055393167}
-  - component: {fileID: 1388498308801202585}
+  - component: {fileID: 1851198354}
   - component: {fileID: 7926454268368999294}
   - component: {fileID: 1931216949385582134}
-  - component: {fileID: 867913840225245966}
-  - component: {fileID: -7511671767084652926}
-  - component: {fileID: 6759781129590216376}
   - component: {fileID: 5189199389145624475}
+  - component: {fileID: 6759781129590216376}
   - component: {fileID: 4089217613450931506}
-  - component: {fileID: 1851198354}
+  - component: {fileID: 867913840225245966}
+  - component: {fileID: 1388498308801202585}
+  - component: {fileID: 9023152100055393167}
   m_Layer: 9
   m_Name: Wheely
   m_TagString: Untagged
@@ -114,34 +113,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &9023152100055393167
-MonoBehaviour:
+--- !u!50 &1851198354
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8254162880705876761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f52209796c059ba469b0e4c1a8cdb75c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSanity: 100
-  _controlPoints: 100
---- !u!114 &1388498308801202585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8254162880705876761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48462d0fb6611e44daf7355fd9703550, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHp: 100
-  _healthPoints: 100
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!70 &7926454268368999294
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -155,8 +147,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -1.23}
-  m_Size: {x: 1.64, y: 0.64}
+  m_Offset: {x: 0, y: -0.94}
+  m_Size: {x: 1.64, y: 0.76}
   m_Direction: 1
 --- !u!58 &1931216949385582134
 CircleCollider2D:
@@ -174,7 +166,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0.12}
   serializedVersion: 2
   m_Radius: 0.91
---- !u!114 &867913840225245966
+--- !u!114 &5189199389145624475
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,46 +175,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 8254162880705876761}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36fd367b21a5d8a4080fa06fb955e56e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UpAnimation: Robot3_Up
-  RightAnimation: Robot3_Right
-  DownAnimation: Robot3_Down
-  LeftAnimation: Robot3_Left
-  State: 0
-  InputTimeout: 0.5
-  Sanity: 10
-  connectedButton: {fileID: 0}
-  _isHacked: 0
---- !u!114 &-7511671767084652926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8254162880705876761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
+  m_Script: {fileID: 11500000, guid: 22e6c29e32504465faa943c537d8029b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  drawGizmos: 1
-  detailedGizmos: 0
-  startEndModifier:
-    addPoints: 0
-    exactStartPoint: 3
-    exactEndPoint: 3
-    useRaycasting: 0
-    mask:
-      serializedVersion: 2
-      m_Bits: 4294967295
-    useGraphRaycasting: 0
-  traversableTags: -1
-  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  graphMask:
-    value: -1
+  targets:
+  - {fileID: 0}
+  - {fileID: 0}
+  delay: 0
 --- !u!114 &6759781129590216376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,7 +201,7 @@ MonoBehaviour:
   repathRate: 0.5
   canSearch: 1
   canMove: 1
-  maxSpeed: 5
+  maxSpeed: 3
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2
@@ -252,30 +212,13 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 0.6
+  slowdownDistance: 1.12
   pickNextWaypointDist: 2
-  endReachedDistance: 0.2
+  endReachedDistance: 0.8
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
   constrainInsideGraph: 0
---- !u!114 &5189199389145624475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8254162880705876761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22e6c29e32504465faa943c537d8029b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
-  targets:
-  - {fileID: 0}
-  - {fileID: 0}
-  delay: 0
 --- !u!114 &4089217613450931506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,27 +247,58 @@ MonoBehaviour:
   tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   graphMask:
     value: -1
---- !u!50 &1851198354
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!114 &867913840225245966
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8254162880705876761}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36fd367b21a5d8a4080fa06fb955e56e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UpAnimation: Robot3_Up
+  RightAnimation: Robot3_Right
+  DownAnimation: Robot3_Down
+  LeftAnimation: Robot3_Left
+  State: 0
+  InputTimeout: 0.5
+  Sanity: 10
+  connectedButton: {fileID: 0}
+  TerminalWaitTime: 1
+  SanityDrain: 25
+  SanityRegain: 15
+  _isHacked: 0
+--- !u!114 &1388498308801202585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8254162880705876761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48462d0fb6611e44daf7355fd9703550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHp: 100
+  _healthPoints: 100
+--- !u!114 &9023152100055393167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8254162880705876761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f52209796c059ba469b0e4c1a8cdb75c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSanity: 100
+  _controlPoints: 100
 --- !u!1001 &3711366944253387799
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -386,7 +360,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22400006, guid: 69b4c8ebd19e53740ad2b9a5ada417f9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1.7538
+      value: -1.399
       objectReference: {fileID: 0}
     - target: {fileID: 22400006, guid: 69b4c8ebd19e53740ad2b9a5ada417f9, type: 3}
       propertyPath: m_SizeDelta.x
@@ -517,7 +491,7 @@ PrefabInstance:
     - target: {fileID: 1773269801599959916, guid: 2776371a1c7d8e34d9a41e54867444b6,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1.966
+      value: -1.6112
       objectReference: {fileID: 0}
     - target: {fileID: 1773269801599959916, guid: 2776371a1c7d8e34d9a41e54867444b6,
         type: 3}

@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 857071019366552837}
   - component: {fileID: 857071019366552834}
   - component: {fileID: 857071019366552838}
+  - component: {fileID: 2288352197593375070}
   - component: {fileID: 857071019366552839}
   - component: {fileID: 857071019366552843}
   - component: {fileID: 857071019366552840}
   - component: {fileID: 857071019366552841}
   - component: {fileID: 158803191354445311}
-  - component: {fileID: 550180584}
   - component: {fileID: 1306562512}
   - component: {fileID: 1306562511}
   m_Layer: 9
@@ -134,6 +134,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!70 &2288352197593375070
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857071019366552835}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.25}
+  m_Size: {x: 2.59, y: 0.75}
+  m_Direction: 1
 --- !u!58 &857071019366552839
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -147,9 +163,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.7503915}
+  m_Offset: {x: 0, y: 0.3}
   serializedVersion: 2
-  m_Radius: 0.8803915
+  m_Radius: 1.03
 --- !u!114 &857071019366552843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,8 +197,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 2
-  radius: 0.5
-  height: 2
+  radius: 1
+  height: 0.01
   repathRate: 0.5
   canSearch: 1
   canMove: 1
@@ -197,13 +213,13 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 1
+  slowdownDistance: 1.25
   pickNextWaypointDist: 2
-  endReachedDistance: 0.25
-  alwaysDrawGizmos: 0
+  endReachedDistance: 1
+  alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 1
-  constrainInsideGraph: 0
+  constrainInsideGraph: 1
 --- !u!114 &857071019366552841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,22 +272,6 @@ MonoBehaviour:
   SanityDrain: 25
   SanityRegain: 15
   _isHacked: 0
---- !u!58 &550180584
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 857071019366552835}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.647079}
-  serializedVersion: 2
-  m_Radius: 0.764668
 --- !u!114 &1306562512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379,7 +379,7 @@ PrefabInstance:
     - target: {fileID: 1773269801599959916, guid: 2776371a1c7d8e34d9a41e54867444b6,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1.712
+      value: -1.1609999
       objectReference: {fileID: 0}
     - target: {fileID: 1773269801599959916, guid: 2776371a1c7d8e34d9a41e54867444b6,
         type: 3}
@@ -490,7 +490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22400006, guid: 69b4c8ebd19e53740ad2b9a5ada417f9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1.441
+      value: -0.89
       objectReference: {fileID: 0}
     - target: {fileID: 22400006, guid: 69b4c8ebd19e53740ad2b9a5ada417f9, type: 3}
       propertyPath: m_SizeDelta.x

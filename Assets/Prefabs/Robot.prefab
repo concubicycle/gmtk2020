@@ -11,15 +11,15 @@ GameObject:
   - component: {fileID: 6796526385200950148}
   - component: {fileID: 6796526385200950151}
   - component: {fileID: 6796526385200950149}
-  - component: {fileID: 691734726}
+  - component: {fileID: 4512632569527792992}
   - component: {fileID: 8852165213872151166}
+  - component: {fileID: 1851151078}
   - component: {fileID: 691734725}
   - component: {fileID: 691734729}
   - component: {fileID: 691734730}
   - component: {fileID: 691734733}
   - component: {fileID: 1633553602}
   - component: {fileID: 6796526384811598661}
-  - component: {fileID: 1851151078}
   - component: {fileID: 1851151077}
   m_Layer: 9
   m_Name: Robot
@@ -114,7 +114,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &691734726
+--- !u!50 &4512632569527792992
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -148,9 +148,25 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.25719434, y: -1.2821375}
-  m_Size: {x: 2.5833256, y: 1.3457566}
+  m_Offset: {x: 0, y: -1.2821375}
+  m_Size: {x: 3.23, y: 1.27}
   m_Direction: 1
+--- !u!58 &1851151078
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6796526385200950150}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.58427763}
+  serializedVersion: 2
+  m_Radius: 1.16
 --- !u!114 &691734725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,13 +213,13 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 1
+  slowdownDistance: 1.5
   pickNextWaypointDist: 2
-  endReachedDistance: 1
-  alwaysDrawGizmos: 0
+  endReachedDistance: 1.2
+  alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 1
-  constrainInsideGraph: 0
+  constrainInsideGraph: 1
 --- !u!114 &691734730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,7 +268,7 @@ MonoBehaviour:
   InputTimeout: 0.5
   Sanity: 10
   connectedButton: {fileID: 0}
-  TerminalWaitTime: 0.5
+  TerminalWaitTime: 1
   SanityDrain: 25
   SanityRegain: 15
   _isHacked: 0
@@ -284,22 +300,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSanity: 100
   _controlPoints: 100
---- !u!58 &1851151078
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6796526385200950150}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.05257845, y: -0.58427763}
-  serializedVersion: 2
-  m_Radius: 0.9951329
 --- !u!114 &1851151077
 MonoBehaviour:
   m_ObjectHideFlags: 0
