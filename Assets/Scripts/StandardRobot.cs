@@ -156,7 +156,6 @@ namespace Assets.Scripts
                 {
                     timeSinceDestination += Time.deltaTime;
                 }
-                
 
                 _sanity.SanityPoints += Time.deltaTime * SanityRegain;
 
@@ -255,7 +254,6 @@ namespace Assets.Scripts
             {
                 connectedButton.SetActive(true);
             }
-
         }
 
         private void SetConnected(bool connect)
