@@ -50,7 +50,12 @@ namespace Assets.Scripts
         public bool IsHacked
         {
             get => _isHacked;
-            set => _isHacked = value;
+            set
+            {
+                _isHacked = value;
+                isControlled = false;
+                connectedButton.SetActive(value);
+            }
         }
 
         private void OnTriggerEnter2D(Collider2D collision)

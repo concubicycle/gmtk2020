@@ -113,19 +113,27 @@ namespace Assets.Scripts
 
         private IEnumerator DoChasing()
         {
-            var caughtDistanceSq = 1;
+            var caughtDistanceSq = 8;
 
             while (State == ScientistBehavior.Chasing)
             {
+                var vel = new Vector2(_aiPath.velocity.x, _aiPath.velocity.y);
+                SetAnimatorState(vel);
+
                 var targetTransform = _targetRobot.GetComponent<Transform>();
                 var transform = GetComponent<Transform>();
-
+                
                 var toTarget = targetTransform.position - transform.position;
 
                 if (toTarget.sqrMagnitude < caughtDistanceSq)
                 {
-                    // pick up robot, carry to trash
+                    var robot = _targetRobot.GetComponent<StandardRobot>();
+                    robot.IsHacked = false;
+                    
+                    TransitionTo(ScientistBehavior.Patrolling);
                 }
+
+
 
                 yield return 0;
             }
@@ -134,12 +142,23 @@ namespace Assets.Scripts
         private void DetectMadRobots()
         {
             float theta = 0;
+            float thetaInc = SightConeRadius / SightRayCount;
 
             // forward ray
             // Cast a ray straight down.
             RaycastHit2D hit = Physics2D.Raycast(transform.position, _forward);
             CheckHit(hit);
             
+            for (int i = 1; i < SightRayCount; ++i)
+            {
+                var ray = Vector2Extensions.RotateVector(_forward, i * thetaInc);
+                hit = Physics2D.Raycast(transform.position, ray);
+                CheckHit(hit);
+
+                ray = Vector2Extensions.RotateVector(_forward, -i * thetaInc);
+                hit = Physics2D.Raycast(transform.position, ray);
+                CheckHit(hit);
+            }
         }
 
         private bool CheckHit(RaycastHit2D hit)
@@ -148,13 +167,14 @@ namespace Assets.Scripts
             if (hit.collider != null && hit.collider.gameObject.layer == RobotLayer)
             {
                 var sanity = hit.collider.gameObject.GetComponent<Sanity>();
-                if (sanity.SanityPoints < VisibleInsanityCutoff)
+                var robot = hit.collider.gameObject.GetComponent<StandardRobot>();
+
+                if (robot.IsHacked)
                 {
                     _targetRobot = hit.collider.gameObject;
                     TransitionTo(ScientistBehavior.Chasing);
                 }
                 
-
                 return true;
             }
 
