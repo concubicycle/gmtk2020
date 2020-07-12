@@ -16,7 +16,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-9128166949657239769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,7 +52,7 @@ MonoBehaviour:
   lastModified: 637301710380000000
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-8301612297068119375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,7 +172,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-7108497292051977925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,6 +276,23 @@ MonoBehaviour:
   Max: 11
   Default: 1
   Exists: 1
+--- !u!114 &-6323188808732936183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Level 1/Intensity
+  m_EditorClassIdentifier: 
+  Name: Intensity
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-6219224413936529008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,7 +309,7 @@ MonoBehaviour:
   Min: 1
   Max: 11
   Default: 1
-  Exists: 1
+  Exists: 0
 --- !u!114 &-5406692531860194577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -653,7 +670,7 @@ MonoBehaviour:
   Path: event:/UI/UI Select
   guid: 056d33759093bd4f99708895d46e3c14
   Banks:
-  - {fileID: -9017947683907478119}
+  - {fileID: 4929423336851031283}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -694,7 +711,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-1742041186616632540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -849,7 +866,7 @@ MonoBehaviour:
   Path: event:/SFX/Robot Dialogue
   guid: a05d10a1f77cb34aafa8d8e3494c5bac
   Banks:
-  - {fileID: -9017947683907478119}
+  - {fileID: 4929423336851031283}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -873,7 +890,7 @@ MonoBehaviour:
   Min: 1
   Max: 11
   Default: 1
-  Exists: 1
+  Exists: 0
 --- !u!114 &-335715525414520845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -905,7 +922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 791810543467652940}
-  - {fileID: -9017947683907478119}
+  - {fileID: 4929423336851031283}
   EditorEvents:
   - {fileID: 5352741875785293234}
   - {fileID: -949566513532640543}
@@ -915,10 +932,10 @@ MonoBehaviour:
   - {fileID: 7137573525498737305}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -9017947683907478119}
+  - {fileID: 4929423336851031283}
   StringsBanks:
   - {fileID: 791810543467652940}
-  stringsBankWriteTime: 637301710380000000
+  stringsBankWriteTime: 637301390401086336
   cacheVersion: 3
 --- !u!114 &271172829182535135
 MonoBehaviour:
@@ -1002,7 +1019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: fmod_project/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637301710380000000
+  lastModified: 637301390401086336
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -1197,6 +1214,23 @@ MonoBehaviour:
   Max: 11
   Default: 1
   Exists: 0
+--- !u!114 &2392229188984812080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Robot Walk/speed
+  m_EditorClassIdentifier: 
+  Name: speed
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &2506898359479558668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1250,6 +1284,40 @@ MonoBehaviour:
   Max: 11
   Default: 1
   Exists: 1
+--- !u!114 &2777139719109889927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Hacking Terminal/isHacked
+  m_EditorClassIdentifier: 
+  Name: isHacked
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &2855628404234625242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Soundtrack/Intensity
+  m_EditorClassIdentifier: 
+  Name: Intensity
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &2954703146168803293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1299,12 +1367,12 @@ MonoBehaviour:
   Path: event:/SFX/Hacking Terminal
   guid: 4b684bb3d5fa3242a334ef89289a9db6
   Banks:
-  - {fileID: -9017947683907478119}
+  - {fileID: 4929423336851031283}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 3441532763270756109}
+  - {fileID: 2777139719109889927}
   MinDistance: 0
   MaxDistance: 0
   Length: 2611
@@ -1358,12 +1426,12 @@ MonoBehaviour:
   Path: event:/SFX/Robot Walk
   guid: ee3b95406aa12f49b47c4683133ee390
   Banks:
-  - {fileID: -9017947683907478119}
+  - {fileID: 4929423336851031283}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -1742153561061970761}
+  - {fileID: 2392229188984812080}
   MinDistance: 0
   MaxDistance: 0
   Length: 14250
@@ -1383,7 +1451,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &3523114270227887067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1401,6 +1469,40 @@ MonoBehaviour:
   lastModified: 637301592826634513
   LoadResult: 0
   FileSizes: []
+  Exists: 1
+--- !u!114 &3957055129931830344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Level 1/Level
+  m_EditorClassIdentifier: 
+  Name: Level
+  Min: 1
+  Max: 11
+  Default: 1
+  Exists: 1
+--- !u!114 &3977235892123372320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Soundtrack/Level
+  m_EditorClassIdentifier: 
+  Name: Level
+  Min: 1
+  Max: 11
+  Default: 1
   Exists: 1
 --- !u!114 &4091022403959757988
 MonoBehaviour:
@@ -1521,6 +1623,24 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &4929423336851031283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: fmod_project/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637301390401675989
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &5129567070910952245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1553,13 +1673,13 @@ MonoBehaviour:
   Path: event:/Music/Level 1
   guid: 061bb0d94ce36343ac51b352ed4acb42
   Banks:
-  - {fileID: -9017947683907478119}
+  - {fileID: 4929423336851031283}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -636840414430049066}
-  - {fileID: -7145487129517561491}
+  - {fileID: 3957055129931830344}
+  - {fileID: -6323188808732936183}
   MinDistance: 0
   MaxDistance: 0
   Length: 88000
@@ -1733,13 +1853,13 @@ MonoBehaviour:
   Path: event:/Music/Soundtrack
   guid: a96ece7b8b717f49bcdb88113df4bfdd
   Banks:
-  - {fileID: -9017947683907478119}
+  - {fileID: 4929423336851031283}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -6219224413936529008}
-  - {fileID: -9143724295994415005}
+  - {fileID: 3977235892123372320}
+  - {fileID: 2855628404234625242}
   MinDistance: 0
   MaxDistance: 0
   Length: 226000
