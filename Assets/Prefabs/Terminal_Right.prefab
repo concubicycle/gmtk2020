@@ -83,8 +83,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7721325272664706658}
   - component: {fileID: 7721325273362435881}
-  - component: {fileID: 7721325273362435882}
   - component: {fileID: 7721325273362435883}
+  - component: {fileID: 7721325273362435882}
   - component: {fileID: 1786670294}
   m_Layer: 10
   m_Name: Terminal_Right
@@ -158,6 +158,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &7721325273362435883
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7721325273362435876}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.5, y: 0}
+  serializedVersion: 2
+  m_Radius: 1
 --- !u!114 &7721325273362435882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,22 +191,6 @@ MonoBehaviour:
   LevelEndUi: {fileID: 0}
   IsVictoryTerminal: 0
   _hackSpeed: 60
---- !u!58 &7721325273362435883
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7721325273362435876}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.5, y: 0}
-  serializedVersion: 2
-  m_Radius: 1
 --- !u!114 &1786670294
 MonoBehaviour:
   m_ObjectHideFlags: 0
