@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
@@ -24,7 +24,7 @@ namespace Assets.Scripts
         [SerializeField]
         private float _hackSpeed = 60;
 
-        private Coroutine _hackSparks = null;
+        private Coroutine _hackEffect = null;
 
 
         private void Start()
@@ -40,7 +40,7 @@ namespace Assets.Scripts
                 var rb = collision.gameObject.GetComponent<StandardRobot>();
 
                 if (rb.IsHacked && !IsHacked)
-                    _hackSparks = StartCoroutine(HackSparks());
+                    _hackEffect = StartCoroutine(HackSparks());
             }
         }
 
@@ -49,10 +49,9 @@ namespace Assets.Scripts
             if (collision.gameObject.layer == RobotLayer)
             {
                 var rb = collision.gameObject.GetComponent<StandardRobot>();
-
-                if (rb.IsHacked && _hackSparks != null)
+                if (rb.IsHacked && _hackEffect != null)
                 {
-                    StopCoroutine(_hackSparks);
+                    StopCoroutine(_hackEffect);
                     _hackedProgress = 0;
                 }
             }
@@ -79,14 +78,14 @@ namespace Assets.Scripts
             {
                 _hackedProgress += Time.deltaTime * _hackSpeed;
 
-                var flickerwait = UnityEngine.Random.Range(0.1f, 0.5f);
+                var flickerwait = UnityEngine.Random.Range(0.1f, 0.4f);
                 Light.color = Color.red;
                 yield return new WaitForSeconds(flickerwait);
                 Light.color = _initialLightColor;
 
                 _hackedProgress += flickerwait * _hackSpeed;
 
-                flickerwait = UnityEngine.Random.Range(0.1f, 0.5f);
+                flickerwait = UnityEngine.Random.Range(0.1f, 0.4f);
                 yield return new WaitForSeconds(flickerwait);
 
                 _hackedProgress += flickerwait * _hackSpeed;

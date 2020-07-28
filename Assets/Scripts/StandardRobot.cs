@@ -38,7 +38,7 @@ namespace Assets.Scripts
 
         private Coroutine _currentRoutine = null;
 
-        private AIPath _aiPath;
+        private AILerp _aiPath;
         private Rigidbody2D _rigidbody;
         private Animator _animator;
         private Sanity _sanity;
@@ -46,9 +46,6 @@ namespace Assets.Scripts
 
         [SerializeField]
         private bool _isHacked = false;
-
-        
-
 
         public bool IsHacked
         {
@@ -79,7 +76,7 @@ namespace Assets.Scripts
 
         private void Start()
         {
-            _aiPath = GetComponent<AIPath>();
+            _aiPath = GetComponent<AILerp>();
             _rigidbody = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
             _sanity = GetComponent<Sanity>();
@@ -153,7 +150,9 @@ namespace Assets.Scripts
                     TransitionTo(RobotState.PlayerControlled);
                 }
 
-                var vel = new Vector2(_aiPath.velocity.x, _aiPath.velocity.y);
+                var dir = _aiPath.interpolator.tangent;
+
+                var vel = new Vector2(dir.x, dir.y);
                 SetAnimatorState(vel);
 
                 if (lastDestination != _aiPath.destination)
@@ -183,22 +182,22 @@ namespace Assets.Scripts
             {
                 if (Input.GetKey("w"))
                 {
-                    _rigidbody.velocity = new Vector3(0, _aiPath.maxSpeed, 0);
+                    _rigidbody.velocity = new Vector3(0, _aiPath.speed, 0);
                     inputTimeoutRemaining = InputTimeout;
                 }
                 else if (Input.GetKey("s"))
                 {
-                    _rigidbody.velocity = new Vector3(0, -_aiPath.maxSpeed, 0);
+                    _rigidbody.velocity = new Vector3(0, -_aiPath.speed, 0);
                     inputTimeoutRemaining = InputTimeout;
                 }
                 else if (Input.GetKey("d"))
                 {
-                    _rigidbody.velocity = new Vector3(_aiPath.maxSpeed, 0, 0);
+                    _rigidbody.velocity = new Vector3(_aiPath.speed, 0, 0);
                     inputTimeoutRemaining = InputTimeout;
                 }
                 else if (Input.GetKey("a"))
                 {
-                    _rigidbody.velocity = new Vector3(-_aiPath.maxSpeed, 0, 0);
+                    _rigidbody.velocity = new Vector3(-_aiPath.speed, 0, 0);
                     inputTimeoutRemaining = InputTimeout;
                 }
                 else

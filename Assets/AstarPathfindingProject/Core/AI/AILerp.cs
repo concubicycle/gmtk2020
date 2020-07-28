@@ -280,7 +280,7 @@ namespace Pathfinding {
 		/// </summary>
 		protected float pathSwitchInterpolationTime = 0;
 
-		protected PathInterpolator interpolator = new PathInterpolator();
+		public PathInterpolator interpolator = new PathInterpolator();
 
 
 		/// <summary>
