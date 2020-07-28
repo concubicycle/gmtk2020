@@ -27,8 +27,7 @@ namespace Assets.Scripts
         public RobotState State = RobotState.Routine;
         public float InputTimeout = 0.5f;
         public float Sanity = 10.0f;
-        public GameObject connectedButton = null;
-        HackingUI buttonScript;
+        HackableItemButton buttonScript;
         bool isControlled = false;
         public float TerminalWaitTime = 1.0f;
 
@@ -53,8 +52,7 @@ namespace Assets.Scripts
             set
             {
                 _isHacked = value;
-                isControlled = false;
-                connectedButton.SetActive(value);
+                isControlled = false;                
                 Light.gameObject.SetActive(value);
             }
         }
@@ -69,7 +67,6 @@ namespace Assets.Scripts
                 if (rb.IsHacked)
                 {
                     IsHacked = true;
-                    EnableButton();
                 }
             }
         }
@@ -82,14 +79,7 @@ namespace Assets.Scripts
             _sanity = GetComponent<Sanity>();
             _health = GetComponent<Health>();
 
-            if (connectedButton != null)
-            {
-                buttonScript = connectedButton.GetComponent<HackingUI>();
-            }
-            else
-            {
-                isControlled = true;
-            }
+            isControlled = true;
 
             TransitionTo(State);
         }
@@ -150,9 +140,9 @@ namespace Assets.Scripts
                     TransitionTo(RobotState.PlayerControlled);
                 }
 
-                var dir = _aiPath.interpolator.tangent;
-
+                var dir = _aiPath.WalkDirection;
                 var vel = new Vector2(dir.x, dir.y);
+
                 SetAnimatorState(vel);
 
                 if (lastDestination != _aiPath.destination)
@@ -232,6 +222,8 @@ namespace Assets.Scripts
             {
                 yield return 0;
             }
+
+            TransitionTo(RobotState.Routine);
         }
 
         private IEnumerator DoBroken()
@@ -256,14 +248,6 @@ namespace Assets.Scripts
                 _animator.Play("Base Layer." + RightAnimation);
             else
                 _animator.Play("Base Layer." + LeftAnimation);
-        }
-
-        private void EnableButton()
-        {
-            if (connectedButton != null)
-            {
-                connectedButton.SetActive(true);
-            }
         }
 
         private void SetConnected(bool connect)

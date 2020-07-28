@@ -5,9 +5,9 @@ using UnityEngine;
 public class HackingUIController : MonoBehaviour
 {
 
-    HackingUI currentButton;
+    HackableItemButton currentButton;
 
-    private void SetButton(HackingUI cB)
+    private void SetButton(HackableItemButton cB)
     {
         currentButton = cB;
     }
@@ -27,7 +27,7 @@ public class HackingUIController : MonoBehaviour
         return currentButton != null;
     }
 
-    public bool IsThisActive(HackingUI tB)
+    public bool IsThisActive(HackableItemButton tB)
     {
         return tB == currentButton;
     }

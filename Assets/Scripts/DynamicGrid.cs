@@ -10,6 +10,8 @@ namespace Assets.Scripts
 		RectTransform rect;
 		public int cellCount = 2;
 
+		public float Height = 64;
+
 		void Start()
 		{
 			gridLayoutGroup = GetComponent<GridLayoutGroup>();
@@ -22,9 +24,7 @@ namespace Assets.Scripts
 			if (gridLayoutGroup != null && rect != null)
 			{
 				float totalWidth = rect.rect.width;
-				float paddingWidth = (cellCount + 1) * gridLayoutGroup.spacing.x;
-				float cellSize = (totalWidth - paddingWidth) / cellCount + 2;
-				gridLayoutGroup.cellSize = new Vector2(cellSize, cellSize);
+				gridLayoutGroup.cellSize = new Vector2(totalWidth, Height);
 			}
 		}
 	}

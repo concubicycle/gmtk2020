@@ -4,33 +4,39 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HackingUI : MonoBehaviour
+public class HackableItemButton : MonoBehaviour
 {
-    public GameObject connectedRobot;
+    
     StandardRobot robotScript;
     GameObject thisButton;
     HackingUIController controlScript;
     bool isActiveOne = false;
 
-    public Image SelectedImage = null;
-
     private Image _originalButtonImage;
-
+    private GameObject _connectedRobot;
     private Button _button;
+
+
+    public GameObject ConnectedRobot
+    {
+        get => _connectedRobot;
+        set
+        {
+            _connectedRobot = value;
+        }
+    }
 
     void Start()
     {
         _button = GetComponent<Button>();
-        thisButton = this.gameObject;
-        robotScript = connectedRobot.GetComponent<StandardRobot>();
+        thisButton = this.gameObject;        
         controlScript = FindObjectOfType<HackingUIController>();
-
         _originalButtonImage = _button.image;
     }
 
     void OnButtonClick()
     {
-        if(connectedRobot != null)
+        if(_connectedRobot != null)
         {
             if(!isActiveOne && controlScript.IsButtonActive())
             {
@@ -44,8 +50,6 @@ public class HackingUI : MonoBehaviour
                 controlScript.SendMessage("SetButton", this);
                 robotScript.SendMessage("SetConnected", true);
                 //if we get that far, open camera/room on which the robot is
-
-                _button.image = SelectedImage ?? _originalButtonImage;
             } 
             else
             {

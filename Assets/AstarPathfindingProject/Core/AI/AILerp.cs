@@ -280,8 +280,10 @@ namespace Pathfinding {
 		/// </summary>
 		protected float pathSwitchInterpolationTime = 0;
 
-		public PathInterpolator interpolator = new PathInterpolator();
-
+		protected PathInterpolator interpolator = new PathInterpolator();
+		public Vector3 WalkDirection => path != null 
+			? interpolator.tangent 
+			: Vector3.zero;
 
 		/// <summary>
 		/// Holds if the Start function has been run.
