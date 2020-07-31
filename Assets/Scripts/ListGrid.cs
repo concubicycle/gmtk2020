@@ -13,7 +13,7 @@ namespace Assets.Scripts
 	[RequireComponent(typeof(GridLayoutGroup))]
 	class ListGrid : MonoBehaviour
 	{
-		public DynamicGridDirection direction;
+		public DynamicGridDirection direction = DynamicGridDirection.Horizontal;
 		public bool StretchElements = true;
 
 

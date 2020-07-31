@@ -27,10 +27,9 @@ namespace Assets.Scripts
         public RobotState State = RobotState.Routine;
         public float InputTimeout = 0.5f;
         public float Sanity = 10.0f;
-        HackableItemButton buttonScript;
         bool isControlled = false;
         public float TerminalWaitTime = 1.0f;
-
+        
         public float SanityDrain = 25;
         public float SanityRegain = 15;
         public UnityEngine.Experimental.Rendering.Universal.Light2D Light = null;
@@ -46,6 +45,9 @@ namespace Assets.Scripts
         [SerializeField]
         private bool _isHacked = false;
 
+        [SerializeField]
+        private string _name = "Unnamed Robot";
+
         public bool IsHacked
         {
             get => _isHacked;
@@ -56,6 +58,10 @@ namespace Assets.Scripts
                 Light.gameObject.SetActive(value);
             }
         }
+
+        public string Name => _name;
+
+
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
@@ -217,7 +223,8 @@ namespace Assets.Scripts
 
         private IEnumerator DoInsane()
         {
-            buttonScript.SendMessage("OnInsane");
+            IsHacked = false;
+
             while (State == RobotState.PlayerControlled)
             {
                 yield return 0;

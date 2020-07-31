@@ -33,7 +33,7 @@ namespace Assets.Scripts
         private GameObject _healthBarGreen;
 
         [SerializeField]
-        private Health _health;
+        private Health _health = null;
 
         public void Awake()
         {                        

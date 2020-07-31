@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8312644932617165756}
   - component: {fileID: 8312644932617165757}
   m_Layer: 5
-  m_Name: Button
+  m_Name: HackableButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8312644932617165751}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -155,6 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67cd72a589cd8074aa1ec04f0423c823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 8312644933624910735}
 --- !u!114 &8312644932617165757
 MonoBehaviour:
   m_ObjectHideFlags: 0

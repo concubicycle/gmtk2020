@@ -1,7 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.GlobalIllumination;
+
 
 namespace Assets.Scripts
 {
@@ -10,21 +9,39 @@ namespace Assets.Scripts
         public const int RobotLayer = 9;
 
         public UnityEngine.Experimental.Rendering.Universal.Light2D Light = null;
+        public GameObject LevelEndUi = null;
+        public bool IsVictoryTerminal = false;
+        
 
         [SerializeField]
         private bool _isHacked = false;
 
-        private Color _initialLightColor;
-
-        public GameObject LevelEndUi = null;
-        public bool IsVictoryTerminal = false;
-
-        private float _hackedProgress;
-
         [SerializeField]
         private float _hackSpeed = 60;
 
+        [SerializeField]
+        private string _name = "Unnamed Terminal";
+
         private Coroutine _hackEffect = null;
+        private float _hackedProgress;
+        private Color _initialLightColor;
+
+        public bool IsHacked
+        {
+            get => _isHacked;
+            set
+            {
+                _isHacked = value;
+                Light.color = _isHacked ? Color.red : _initialLightColor;
+
+                if (_isHacked && IsVictoryTerminal)
+                {
+                    LevelEndUi.SetActive(true);
+                }
+            }
+        }
+
+        public string Name => _name;
 
 
         private void Start()
@@ -53,21 +70,6 @@ namespace Assets.Scripts
                 {
                     StopCoroutine(_hackEffect);
                     _hackedProgress = 0;
-                }
-            }
-        }
-
-        public bool IsHacked
-        {
-            get => _isHacked;
-            set
-            {
-                _isHacked = value;
-                Light.color = _isHacked ? Color.red : _initialLightColor;
-
-                if (_isHacked && IsVictoryTerminal)
-                {
-                    LevelEndUi.SetActive(true);
                 }
             }
         }
