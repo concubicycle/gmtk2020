@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace Assets.Scripts.Ui
@@ -12,12 +14,11 @@ namespace Assets.Scripts.Ui
 
         private void Start()
         {
+            Func<int, UnityAction> makeCallback = (int index) => () => SetUI(index);
+
             for (int i = 0; i < TabButtons.Count; ++i)
             {
-                TabButtons[i].onClick.AddListener(() =>
-                {
-                    SetUI(i);
-                });
+                TabButtons[i].onClick.AddListener(makeCallback(i));
             }
         }
 
@@ -28,7 +29,7 @@ namespace Assets.Scripts.Ui
 
             TabUis[index++].SetActive(true);
 
-            for (int i = 0; i < TabUis.Count; i++)
+            for (int i = index; i < TabUis.Count; i++)
                 TabUis[i].SetActive(false);
         }
     }
