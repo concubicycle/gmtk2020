@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4691214139866849581}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.6475344, y: -0.13854599, z: -2.1123047}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8601047821340514730}
@@ -87,11 +87,12 @@ GameObject:
   - component: {fileID: 7926454268368999294}
   - component: {fileID: 1931216949385582134}
   - component: {fileID: 5189199389145624475}
-  - component: {fileID: 6759781129590216376}
   - component: {fileID: 4089217613450931506}
   - component: {fileID: 867913840225245966}
   - component: {fileID: 1388498308801202585}
   - component: {fileID: 9023152100055393167}
+  - component: {fileID: 91721346}
+  - component: {fileID: 91721347}
   m_Layer: 9
   m_Name: Wheely
   m_TagString: Untagged
@@ -256,42 +257,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   delay: 0
---- !u!114 &6759781129590216376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8254162880705876761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 2
-  radius: 0.5
-  height: 2
-  repathRate: 0.5
-  canSearch: 1
-  canMove: 1
-  maxSpeed: 3
-  gravity: {x: NaN, y: NaN, z: NaN}
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  centerOffsetCompatibility: NaN
-  orientation: 1
-  enableRotation: 0
-  targetCompatibility: {fileID: 0}
-  maxAcceleration: -2.5
-  rotationSpeed: 360
-  slowdownDistance: 1.12
-  pickNextWaypointDist: 2
-  endReachedDistance: 0.8
-  alwaysDrawGizmos: 0
-  slowWhenNotFacingTarget: 1
-  whenCloseToDestination: 0
-  constrainInsideGraph: 0
 --- !u!114 &4089217613450931506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,12 +304,10 @@ MonoBehaviour:
   State: 0
   InputTimeout: 0.5
   Sanity: 10
-  connectedButton: {fileID: 0}
   TerminalWaitTime: 1
   SanityDrain: 25
   SanityRegain: 15
   Light: {fileID: 3814915077273585270}
-  _isHacked: 0
 --- !u!114 &1388498308801202585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373,6 +336,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSanity: 100
   _controlPoints: 100
+--- !u!114 &91721346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8254162880705876761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3b8c61dc8220704698b4a7c7e9feed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Unnamed item
+  _isHacked: 0
+  _isControlled: 0
+--- !u!114 &91721347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8254162880705876761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 847a14d4dc9cc43679ab34fc78e0182f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 2
+  repathRate: 0.5
+  canSearch: 1
+  canMove: 1
+  speed: 3
+  orientation: 1
+  enableRotation: 0
+  rotationSpeed: 10
+  interpolatePathSwitches: 1
+  switchPathInterpolationSpeed: 5
+  targetCompatibility: {fileID: 0}
 --- !u!1001 &3711366944253387799
 PrefabInstance:
   m_ObjectHideFlags: 0

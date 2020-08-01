@@ -15,11 +15,12 @@ GameObject:
   - component: {fileID: 2288352197593375070}
   - component: {fileID: 857071019366552839}
   - component: {fileID: 857071019366552843}
-  - component: {fileID: 857071019366552840}
   - component: {fileID: 857071019366552841}
   - component: {fileID: 158803191354445311}
   - component: {fileID: 1306562512}
   - component: {fileID: 1306562511}
+  - component: {fileID: 1157884994}
+  - component: {fileID: 1157885002}
   m_Layer: 9
   m_Name: Roomba
   m_TagString: Untagged
@@ -183,44 +184,7 @@ MonoBehaviour:
   targets:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
   delay: 0
---- !u!114 &857071019366552840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 857071019366552835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6eb1402c17e84a9282a7f0f62eb584f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 2
-  radius: 1
-  height: 0.01
-  repathRate: 0.5
-  canSearch: 1
-  canMove: 1
-  maxSpeed: 4
-  gravity: {x: NaN, y: NaN, z: NaN}
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  centerOffsetCompatibility: NaN
-  orientation: 1
-  enableRotation: 0
-  targetCompatibility: {fileID: 0}
-  maxAcceleration: -2.5
-  rotationSpeed: 360
-  slowdownDistance: 1.25
-  pickNextWaypointDist: 2
-  endReachedDistance: 1
-  alwaysDrawGizmos: 1
-  slowWhenNotFacingTarget: 1
-  whenCloseToDestination: 1
-  constrainInsideGraph: 1
 --- !u!114 &857071019366552841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,12 +232,10 @@ MonoBehaviour:
   State: 0
   InputTimeout: 0.5
   Sanity: 10
-  connectedButton: {fileID: 0}
   TerminalWaitTime: 1
   SanityDrain: 25
   SanityRegain: 15
   Light: {fileID: 5945398409933535379}
-  _isHacked: 0
 --- !u!114 &1306562512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -302,6 +264,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSanity: 100
   _controlPoints: 100
+--- !u!114 &1157884994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857071019366552835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 847a14d4dc9cc43679ab34fc78e0182f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 2
+  repathRate: 0.5
+  canSearch: 1
+  canMove: 1
+  speed: 3
+  orientation: 1
+  enableRotation: 0
+  rotationSpeed: 10
+  interpolatePathSwitches: 1
+  switchPathInterpolationSpeed: 5
+  targetCompatibility: {fileID: 0}
+--- !u!114 &1157885002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857071019366552835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3b8c61dc8220704698b4a7c7e9feed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Roomba
+  _isHacked: 0
+  _isControlled: 0
 --- !u!1 &3309973673160594533
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,7 +327,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3309973673160594533}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.9851665, y: -1.2255583, z: 3.4465528}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 857071019366552836}
