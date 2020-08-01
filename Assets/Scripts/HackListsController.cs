@@ -39,13 +39,15 @@ namespace Assets.Scripts
             {
                 foreach (var t in _terminals)
                 {
-                    if (t.IsHacked) AddButton(t);
+                    var hackable = t.GetComponent<Hackable>();
+                    if (hackable.IsHacked) AddButton(t);
                     else RemoveButton(t);
                 }
 
                 foreach (var r in _robots)
                 {
-                    if (r.IsHacked) AddButton(r);
+                    var hackable = r.GetComponent<Hackable>();
+                    if (hackable.IsHacked) AddButton(r);
                     else RemoveButton(r);
                 }
 
@@ -61,8 +63,10 @@ namespace Assets.Scripts
             _terminalButtons[t] = Instantiate(ButtonPrefab);
             var button = _terminalButtons[t].GetComponent<HackableItemButton>();
             var buttonRect = _terminalButtons[t].GetComponent<RectTransform>();
-            button.ConnectedItem = t;
-            buttonRect.parent = terminalButtonList;
+            button.ConnectedItem = t.GetComponent<Hackable>();
+            buttonRect.SetParent(terminalButtonList);
+
+            button.ButtonPressed += (gameObject) => Select(t);
         }
 
         private void AddButton(StandardRobot r)
@@ -71,10 +75,11 @@ namespace Assets.Scripts
 
             _robotButtons[r] = Instantiate(ButtonPrefab);
             var button = _robotButtons[r].GetComponent<HackableItemButton>();
-            var buttonRect = _robotButtons[r].GetComponent<RectTransform>();
-            
-            button.ConnectedItem = r;
-            buttonRect.parent = robotButtonList;
+            var buttonRect = _robotButtons[r].GetComponent<RectTransform>();            
+            button.ConnectedItem = r.GetComponent<Hackable>();
+            buttonRect.SetParent(robotButtonList);
+
+            button.ButtonPressed += (gameObject) => Select(r);
         }
 
         private void RemoveButton(Terminal t)
@@ -91,6 +96,24 @@ namespace Assets.Scripts
 
             var button = _robotButtons[r];
             Destroy(button);
+        }
+
+        private void Select(Terminal terminal)
+        {
+            foreach (var r in _robots)
+                r.GetComponent<Hackable>().IsControlled = r == false;
+
+            foreach (var t in _terminals)
+                t.GetComponent<Hackable>().IsControlled = t == terminal;
+        }
+
+        private void Select(StandardRobot robot)
+        {
+            foreach(var r in _robots)
+                r.GetComponent<Hackable>().IsControlled = r == robot;
+
+            foreach(var t in _terminals)
+                t.GetComponent<Hackable>().IsControlled = false;
         }
     }
 }

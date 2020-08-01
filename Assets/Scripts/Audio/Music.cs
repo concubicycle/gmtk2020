@@ -44,23 +44,17 @@ public class Music : MonoBehaviour
     int getSceneNumberByName(string name) {
     	switch (name) {
     		case "LevelOne":
-    			return 1;
-    			break;
+    			return 1;    			
     		case "LevelTwo":
-    			return 2;
-    			break;
+    			return 2;    			
     		case "LevelThree":
-    			return 3;
-    			break;
+    			return 3;    			
     		case "LevelFour":
-    			return 4;
-    			break;
+    			return 4;    			
     		case "LevelFive":
-    			return 5;
-    			break;
+    			return 5;    			
     		default:
     			return 1;
-    			break;
     	}
     }
 }

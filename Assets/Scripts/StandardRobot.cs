@@ -14,7 +14,8 @@ namespace Assets.Scripts
         Broken
     }
 
-    class StandardRobot : MonoBehaviour, IHackable
+    [RequireComponent(typeof(Hackable))]
+    class StandardRobot : MonoBehaviour
     {
         public const int TerminalLayer = 10;
 
@@ -27,7 +28,6 @@ namespace Assets.Scripts
         public RobotState State = RobotState.Routine;
         public float InputTimeout = 0.5f;
         public float Sanity = 10.0f;
-        bool isControlled = false;
         public float TerminalWaitTime = 1.0f;
         
         public float SanityDrain = 25;
@@ -41,54 +41,39 @@ namespace Assets.Scripts
         private Animator _animator;
         private Sanity _sanity;
         private Health _health;
-
-        [SerializeField]
-        private bool _isHacked = false;
-
-        [SerializeField]
-        private string _name = "Unnamed Robot";
-
-        public bool IsHacked
-        {
-            get => _isHacked;
-            set
-            {
-                _isHacked = value;
-                isControlled = false;                
-                Light.gameObject.SetActive(value);
-            }
-        }
-
-        public string Name => _name;
+        private Hackable _hackable;
 
 
-
-        private void OnTriggerEnter2D(Collider2D collision)
-        {
-            if (collision.gameObject.layer == TerminalLayer)
-            {
-                var rb =
-                    collision.gameObject.GetComponent<Terminal>();
-
-                if (rb.IsHacked)
-                {
-                    IsHacked = true;
-                }
-            }
-        }
-
-        private void Start()
+        private void Awake()
         {
             _aiPath = GetComponent<AILerp>();
             _rigidbody = GetComponent<Rigidbody2D>();
             _animator = GetComponent<Animator>();
             _sanity = GetComponent<Sanity>();
             _health = GetComponent<Health>();
+            _hackable = GetComponent<Hackable>();
+        }
 
-            isControlled = true;
-
+        private void Start()
+        {
+            Light.gameObject.SetActive(_hackable.IsHacked);
+            _hackable.HackedStatusChanged += (bool value) => Light.gameObject.SetActive(value);
             TransitionTo(State);
         }
+
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.layer == TerminalLayer)
+            {
+                var terminal = collision.gameObject.GetComponent<Hackable>();
+                if (terminal.IsHacked)
+                {
+                    _hackable.IsHacked = true;
+                }
+            }
+        }
+      
 
         private void Update()
         {
@@ -137,7 +122,7 @@ namespace Assets.Scripts
             {
                 var sanityFulll = (_sanity.maxSanity - _sanity.SanityPoints) < 2;
 
-                if (sanityFulll && isControlled &&
+                if (sanityFulll && _hackable.IsControlled &&
                     (Input.GetKey("w") ||
                      Input.GetKey("s") ||
                      Input.GetKey("d") ||
@@ -205,7 +190,7 @@ namespace Assets.Scripts
                     inputTimeoutRemaining -= Time.deltaTime;
                 }
 
-                if (inputTimeoutRemaining <= 0 || !isControlled)
+                if (inputTimeoutRemaining <= 0 || !_hackable.IsControlled)
                 {
                     TransitionTo(RobotState.Routine);
                 }
@@ -223,7 +208,7 @@ namespace Assets.Scripts
 
         private IEnumerator DoInsane()
         {
-            IsHacked = false;
+            _hackable.IsHacked = false;
 
             while (State == RobotState.PlayerControlled)
             {
@@ -255,11 +240,6 @@ namespace Assets.Scripts
                 _animator.Play("Base Layer." + RightAnimation);
             else
                 _animator.Play("Base Layer." + LeftAnimation);
-        }
-
-        private void SetConnected(bool connect)
-        {
-            isControlled = connect;
         }
     }
 }

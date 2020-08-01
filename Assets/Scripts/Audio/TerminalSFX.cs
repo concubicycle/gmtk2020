@@ -24,10 +24,10 @@ public class TerminalSFX : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-    	Terminal terminal = this.gameObject.GetComponent<Terminal>();
+    	var terminalHackable = this.gameObject.GetComponent<Hackable>();
     	bool isRobot = collision.gameObject.layer == RobotLayer;
-    	bool isHacked = collision.gameObject.GetComponent<StandardRobot>().IsHacked;
-    	if (isRobot && isHacked && !terminal.IsHacked) {
+    	bool isHacked = collision.gameObject.GetComponent<Hackable>().IsHacked;
+    	if (isRobot && isHacked && !terminalHackable.IsHacked) {
     		TerminalSFXEvent.start();
     	}
 

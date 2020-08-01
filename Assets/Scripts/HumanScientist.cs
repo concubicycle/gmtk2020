@@ -130,8 +130,8 @@ namespace Assets.Scripts
 
                 if (toTarget.sqrMagnitude < caughtDistanceSq)
                 {
-                    var robot = _targetRobot.GetComponent<StandardRobot>();
-                    robot.IsHacked = false;
+                    var hackable = _targetRobot.GetComponent<Hackable>();
+                    hackable.IsHacked = false;
 
                     yield return new WaitForSeconds(1.0f);
 
@@ -175,9 +175,9 @@ namespace Assets.Scripts
             if (hit.collider != null && hit.collider.gameObject.layer == RobotLayer)
             {
                 var sanity = hit.collider.gameObject.GetComponent<Sanity>();
-                var robot = hit.collider.gameObject.GetComponent<StandardRobot>();
+                var hackable = hit.collider.gameObject.GetComponent<Hackable>();
 
-                if (robot.IsHacked)
+                if (hackable.IsHacked)
                 {
                     _targetRobot = hit.collider.gameObject;
                     TransitionTo(ScientistBehavior.Chasing);

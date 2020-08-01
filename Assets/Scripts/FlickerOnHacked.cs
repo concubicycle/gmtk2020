@@ -7,12 +7,14 @@ namespace Assets.Scripts
     class FlickerOnHacked : MonoBehaviour
     {
         private Terminal _terminal;
+        private Hackable _hackable;
 
         public float InitialWait = 3.0f;
 
         private void Start()
         {
             _terminal = GetComponent<Terminal>();
+            _hackable = GetComponent<Hackable>();
 
             StartCoroutine(FlickerOn());
         }
@@ -29,15 +31,15 @@ namespace Assets.Scripts
                 var subtr = Random.Range(0.1f, 0.3f);
 
                 yield return new WaitForSeconds(initialInterval / 4);
-                _terminal.IsHacked = !_terminal.IsHacked;
+                _hackable.IsHacked = !_hackable.IsHacked;
                 yield return new WaitForSeconds(initialInterval / 4);
-                _terminal.IsHacked = !_terminal.IsHacked;
+                _hackable.IsHacked = !_hackable.IsHacked;
 
                 yield return new WaitForSeconds(initialInterval);
                 initialInterval -= subtr;
             }
 
-            _terminal.IsHacked = true;
+            _hackable.IsHacked = true;
         }
     }
 }

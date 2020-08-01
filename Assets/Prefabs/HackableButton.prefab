@@ -117,32 +117,10 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 8312644932617165746}
+  m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8312644932617165756}
-        m_MethodName: SendMessage
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: OnButtonClick
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 8312644932617165757}
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &8312644932617165756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,6 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67cd72a589cd8074aa1ec04f0423c823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _connectedItem: {fileID: 0}
   text: {fileID: 8312644933624910735}
 --- !u!114 &8312644932617165757
 MonoBehaviour:

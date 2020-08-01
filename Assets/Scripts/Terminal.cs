@@ -4,59 +4,51 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    class Terminal : MonoBehaviour, IHackable
+    [RequireComponent(typeof(Hackable))]
+    class Terminal : MonoBehaviour
     {
         public const int RobotLayer = 9;
 
         public UnityEngine.Experimental.Rendering.Universal.Light2D Light = null;
         public GameObject LevelEndUi = null;
         public bool IsVictoryTerminal = false;
-        
-
-        [SerializeField]
-        private bool _isHacked = false;
 
         [SerializeField]
         private float _hackSpeed = 60;
 
-        [SerializeField]
-        private string _name = "Unnamed Terminal";
-
+        private Hackable _hackable;
         private Coroutine _hackEffect = null;
         private float _hackedProgress;
-        private Color _initialLightColor;
+        private Color _initialLightColor;        
 
-        public bool IsHacked
+        private void Awake()
         {
-            get => _isHacked;
-            set
-            {
-                _isHacked = value;
-                Light.color = _isHacked ? Color.red : _initialLightColor;
-
-                if (_isHacked && IsVictoryTerminal)
-                {
-                    LevelEndUi.SetActive(true);
-                }
-            }
+            _hackable = GetComponent<Hackable>();
         }
-
-        public string Name => _name;
-
 
         private void Start()
         {
             _initialLightColor = Light.color;
-            IsHacked = _isHacked;
+            _hackable.HackedStatusChanged += value =>
+            {
+                Light.color = _hackable.IsHacked ? Color.red : _initialLightColor;
+
+                if (_hackable.IsHacked && IsVictoryTerminal)
+                {
+                    LevelEndUi.SetActive(true);
+                }
+            };
+
+            Light.color = _hackable.IsHacked ? Color.red : _initialLightColor;
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.gameObject.layer == RobotLayer)
             {
-                var rb = collision.gameObject.GetComponent<StandardRobot>();
+                var hackable = collision.gameObject.GetComponent<Hackable>();
 
-                if (rb.IsHacked && !IsHacked)
+                if (hackable.IsHacked && !_hackable.IsHacked)
                     _hackEffect = StartCoroutine(HackSparks());
             }
         }
@@ -65,8 +57,8 @@ namespace Assets.Scripts
         {
             if (collision.gameObject.layer == RobotLayer)
             {
-                var rb = collision.gameObject.GetComponent<StandardRobot>();
-                if (rb.IsHacked && _hackEffect != null)
+                var hackable = collision.gameObject.GetComponent<Hackable>();
+                if (hackable.IsHacked && _hackEffect != null)
                 {
                     StopCoroutine(_hackEffect);
                     _hackedProgress = 0;
@@ -95,7 +87,7 @@ namespace Assets.Scripts
                 yield return 0;
             }
 
-            IsHacked = true;
+            _hackable.IsHacked = true;
         }
     }
 }

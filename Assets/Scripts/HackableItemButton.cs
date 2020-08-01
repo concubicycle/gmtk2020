@@ -3,14 +3,17 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class HackableItemButton : MonoBehaviour
 {
-    public  IHackable _connectedItem;
+    public event GameObjectEvent ButtonPressed;
+
+    public Hackable _connectedItem;
     public Text text;
 
     private Button _button;    
 
-    public IHackable ConnectedItem
+    public Hackable ConnectedItem
     {
         get => _connectedItem;
         set
@@ -22,22 +25,7 @@ public class HackableItemButton : MonoBehaviour
 
     void Start()
     {
-        _button = GetComponent<Button>();        
-    }
-
-    void OnButtonClick()
-    {
-      
-    }
-
-    void DisconnectItem()
-    {   
-
-    }
-
-    void OnInsane()
-    {
-        DisconnectItem();
-        gameObject.SetActive(false);
+        _button = GetComponent<Button>();
+        _button.onClick.AddListener(() => ButtonPressed?.Invoke(_connectedItem.gameObject));
     }
 }
