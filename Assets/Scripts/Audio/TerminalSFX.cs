@@ -25,8 +25,11 @@ public class TerminalSFX : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
     	Terminal terminal = this.gameObject.GetComponent<Terminal>();
+
     	bool isRobot = collision.gameObject.layer == RobotLayer;
-    	bool isHacked = collision.gameObject.GetComponent<StandardRobot>().IsHacked;
+    	bool isHacked = collision.gameObject.GetComponent<RobotController>().IsHacked;
+
+            UnityEngine.Debug.Log("sound");
     	if (isRobot && isHacked && !terminal.IsHacked) {
     		TerminalSFXEvent.start();
     	}
@@ -34,7 +37,7 @@ public class TerminalSFX : MonoBehaviour
     	// print(terminal.GetComponent<Terminal>());
         // if (collision.gameObject.layer == 9)
         // {
-        //     var rb = collision.gameObject.GetComponent<StandardRobot>();
+        //     var rb = collision.gameObject.GetComponent<RobotController>();
 
         //     if (rb.IsHacked) {
         //         TerminalSFXEvent.setParameterByName("isHacked", 1f);

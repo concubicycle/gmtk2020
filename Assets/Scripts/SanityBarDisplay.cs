@@ -30,26 +30,26 @@ namespace Assets.Scripts
         public float minHealthBarDimension = 0.01f;
         public float healthbarMargin = 0.01f;
 
-        private GameObject _healthBarGreen;
+        private GameObject _sanityBarBlue;
 
         [SerializeField]
         private Sanity _sanity;
 
         public void Awake()
         {                        
-            _sanity.SanityChangedListeners += UpdateHealthDisplay;
-            _healthBarGreen = transform.Find("HealthBackground/HealthBarRed/HealthBarGreen").gameObject;
+            _sanity.SanityChangedListeners += UpdateSanityDisplay;
+            _sanityBarBlue = transform.Find("SanityBackground/SanityBarRed/SanityBarBlue").gameObject;
         }
 
         public void Update()
         {
-            UpdateHealthDisplay(_sanity.SanityPoints, _sanity.maxSanity);
+            UpdateSanityDisplay(_sanity.SanityPoints, _sanity.maxSanity);
         }
 
 
-        public void UpdateHealthDisplay(float hp, float hpMax)
+        public void UpdateSanityDisplay(float hp, float hpMax)
         {
-            RectTransform hbTrans = _healthBarGreen.GetComponent<RectTransform>();
+            RectTransform hbTrans = _sanityBarBlue.GetComponent<RectTransform>();
             float hbW = hbTrans.GetWidth();
             float hbH = hbTrans.GetHeight();
 

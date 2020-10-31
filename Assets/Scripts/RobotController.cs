@@ -12,7 +12,7 @@ namespace Assets.Scripts
         PlayerControlled,
     }
 
-    class RobotController : MonoBehaviour
+    class RobotController : MonoBehaviour, IsHackable
     {
         private AIPath _aiPath;
         private Rigidbody2D _rigidBody;
@@ -22,12 +22,17 @@ namespace Assets.Scripts
 
         public RobState currentState = RobState.Routine;
 
+        [SerializeField]
+        private bool _isHacked = false;
+
+        public bool isControlled = true;
+        public const int TerminalLayer = 10;
         public float moveSpeed = 3f;
         public float InputTimeout = 0.5f;
         public float TerminalWaitTime = 1.0f;
+        public float Sanity = 10.0f;
         public float SanityDrain = 25;
         public float SanityRegain = 15;
-        public bool isControlled = true;
 
         private Coroutine _currentRoutine = null;
 
@@ -41,6 +46,29 @@ namespace Assets.Scripts
             _health = GetComponent<Health>();
 
             TransitionTo(currentState);
+        }
+
+        public bool IsHacked 
+        {
+            get => _isHacked;
+            set
+            {
+                _isHacked = value;
+                isControlled = false;
+            }
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.layer == TerminalLayer)
+            {
+                var terminal = collision.gameObject.GetComponent<Terminal>();
+
+                if (terminal.IsHacked)
+                {
+                    IsHacked = true;
+                }
+            }
         }
 
         void Update()
@@ -88,7 +116,7 @@ namespace Assets.Scripts
             {
                 var sanityFull = (_sanity.maxSanity - _sanity.SanityPoints) < 2;
 
-                if (sanityFull && isControlled &&
+                if (_isHacked &&sanityFull && isControlled &&
                     (Input.GetKey("w") ||
                      Input.GetKey("s") ||
                      Input.GetKey("d") ||

@@ -1,6 +1,6 @@
 ﻿namespace Assets.Scripts
 {
-    public interface IHackable
+    public interface IsHackable
     {
         bool IsHacked { get; set; }
     }

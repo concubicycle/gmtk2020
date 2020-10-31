@@ -14,7 +14,7 @@ namespace Assets.Scripts
         Broken
     }
 
-    class StandardRobot : MonoBehaviour, IHackable
+    class StandardRobot : MonoBehaviour, IsHackable
     {
         public const int TerminalLayer = 10;
 

@@ -5,7 +5,7 @@ using UnityEngine.Experimental.GlobalIllumination;
 
 namespace Assets.Scripts
 {
-    class Terminal : MonoBehaviour, IHackable
+    class Terminal : MonoBehaviour, IsHackable
     {
         public const int RobotLayer = 9;
 
@@ -37,7 +37,7 @@ namespace Assets.Scripts
         {
             if (collision.gameObject.layer == RobotLayer)
             {
-                var rb = collision.gameObject.GetComponent<StandardRobot>();
+                var rb = collision.gameObject.GetComponent<RobotController>();
 
                 if (rb.IsHacked && !IsHacked)
                     _hackSparks = StartCoroutine(HackSparks());
@@ -48,7 +48,7 @@ namespace Assets.Scripts
         {
             if (collision.gameObject.layer == RobotLayer)
             {
-                var rb = collision.gameObject.GetComponent<StandardRobot>();
+                var rb = collision.gameObject.GetComponent<RobotController>();
 
                 if (rb.IsHacked && _hackSparks != null)
                 {
